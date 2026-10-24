@@ -92,9 +92,9 @@ function Diagram() {
         <path d="M110 70 L230 70" />
         <path d="M320 100 L320 160" />
         <path d="M410 70 L470 70" />
-        <path d="M560 100 L560 300 L420 300" />
+        <path d="M560 100 L560 300 L450 300" />
         <path d="M320 270 L320 100" strokeDasharray="0" opacity="0" />
-        <path d="M230 300 L110 300" />
+        <path d="M200 300 L110 300" />
       </g>
       {/* question */}
       <rect x="10" y="40" width="100" height="60" {...box} />
@@ -120,9 +120,10 @@ function Diagram() {
       <rect x="470" y="40" width="160" height="60" {...ai} />
       <text x="550" y="66" {...t}>&ldquo;I have enough&rdquo;</text>
       <text x="550" y="85" {...m}>writes ranked list</text>
-      <rect x="230" y="285" width="190" height="60" {...code} />
-      <text x="325" y="310" {...t} fontWeight={700}>Safety check (code)</text>
-      <text x="325" y="328" {...m}>Removes anything without a real source</text>
+      <rect x="200" y="278" width="250" height="76" {...code} />
+      <text x="325" y="301" {...t} fontWeight={700}>Safety check (TypeScript)</text>
+      <text x="325" y="319" {...m}>Written with Claude Code</text>
+      <text x="325" y="336" {...m}>Removes anything without a real source</text>
       <rect x="10" y="270" width="100" height="60" {...box} />
       <text x="60" y="305" {...t}>You</text>
       {/* legend */}

@@ -73,6 +73,7 @@ export default function FindAMatch() {
   return (
     <>
       <section className="hero">
+        <span className="eyebrow">Agentic AI</span>
         <h1>The hidden cure</h1>
         <p className="lead">
         Some rare diseases might be helped by a medicine that already exists, one approved for a different illness.

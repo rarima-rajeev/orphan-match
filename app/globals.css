@@ -101,6 +101,8 @@ th { color: var(--muted); font-weight: 600; }
   background: linear-gradient(90deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 90%, transparent) 46%, transparent 70%); }
 .hero > * { position: relative; max-width: 46%; }
 .hero h1 { font-size: 2.4rem; margin-top: 0; }
+.eyebrow { align-self: flex-start; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 0.8rem;
+  letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 10px; }
 .hero .lead { color: var(--text); }
 @media (max-width: 680px) {
   .hero { min-height: 0; padding: 28px 20px 210px; background-position: 85% bottom; background-size: 190% auto; }
