@@ -3,7 +3,11 @@ import { useRef, useState } from "react";
 import type { AgentEvent, DrugMatch, FinalAnswer } from "@/lib/agent";
 import { trackFeedback } from "@/lib/feedback";
 
-const EXAMPLES = ["Castleman disease", "Lymphangioleiomyomatosis", "Fibrodysplasia ossificans progressiva"];
+const EXAMPLES = [
+  { name: "Castleman disease", plain: "A rare immune disorder that makes lymph nodes swell" },
+  { name: "Lymphangioleiomyomatosis", plain: "A rare lung disease, mostly in young women" },
+  { name: "Fibrodysplasia ossificans progressiva", plain: "A very rare genetic disease where muscle slowly turns into bone" },
+];
 
 type SpeechRec = { lang: string; interimResults: boolean; start: () => void; stop: () => void;
   onresult: (e: { results: { 0: { transcript: string } }[] }) => void; onend: () => void; onerror: () => void };
@@ -90,9 +94,19 @@ export default function FindAMatch() {
         <button type="submit" className="primary" disabled={busy || !disease.trim()}>{busy ? "Searching…" : "Find matches"}</button>
       </form>
       {micNote && <p className="small muted" style={{ marginTop: 8 }}>{micNote}</p>}
-      <div className="chips">
-        <span className="small muted">Try:</span>
-        {EXAMPLES.map((x) => <button key={x} className="chip" onClick={() => search(x)} disabled={busy}>{x}</button>)}
+      <p className="audience">
+        <strong>Built for rare diseases</strong>, the kind most medicine companies overlook. It&apos;s meant for researchers and
+        patient groups. Everyday illnesses like fever, sore throat or eczema won&apos;t work well here: they already have
+        treatments, and this tool looks for a hidden cure where there isn&apos;t one yet.
+      </p>
+      <p className="small muted" style={{ marginBottom: 6 }}>Try one of these rare diseases:</p>
+      <div className="examples">
+        {EXAMPLES.map((x) => (
+          <button key={x.name} className="example" onClick={() => search(x.name)} disabled={busy}>
+            <strong>{x.name}</strong>
+            <span>{x.plain}</span>
+          </button>
+        ))}
       </div>
 
       {steps.length > 0 && (
