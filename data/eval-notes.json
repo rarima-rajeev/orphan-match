@@ -1,0 +1,10 @@
+{
+ "hit": {
+  "drug": "propranolol",
+  "why": "The agent asked which proteins are linked to this birthmark-like growth in babies, and found ADRB2: the protein that blood-pressure pills called beta-blockers act on. Propranolol was one of 15 beta-blockers on that list. The agent checked a different one (nadolol) first, then found papers from before 2008 mentioning propranolol and hemangioma, and ranked it #1. The no-AI rule missed it. Caveat: we can't rule out that the AI recognised propranolol from memory."
+ },
+ "miss": {
+  "drug": "sirolimus",
+  "why": "The agent found the right protein family (mTOR), but the database lists sirolimus under a different protein, so no tool ever returned it. The telling detail: the agent searched PubMed for \"sirolimus\" anyway, a medicine no tool had mentioned. That is the AI remembering the answer. Because of the rule that every suggestion must come from a tool result, it couldn't list sirolimus. This is a miss on the score, but it shows the guardrail doing its job."
+ }
+}
