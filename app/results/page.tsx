@@ -1,0 +1,127 @@
+import { existsSync, readFileSync } from "fs";
+import path from "path";
+
+export const metadata = { title: "Results & decisions — Orphan Match" };
+
+type Result = {
+  drug: string; disease: string; year: number; story: string;
+  agent_rank: number | null; agent_hit: boolean; baseline_rank: number | null; baseline_hit: boolean;
+  agent_top: string[]; tool_calls: number; cost_inr: number; error?: string;
+};
+type Notes = { hit?: { drug: string; why: string }; miss?: { drug: string; why: string } };
+
+function load<T>(file: string, fallback: T): T {
+  const p = path.join(process.cwd(), "data", file);
+  return existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : fallback;
+}
+
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const drugName = (s: string) => cap(s.toLowerCase());
+
+const DECISIONS = [
+  ["An agent, not a fixed recipe", "Each rare disease needs a different search path."],
+  ["A hard cap of 12 tool calls", "Keeps cost and waiting time predictable."],
+  ["Code checks every source", "AI can invent sources. Code can't be talked out of a rule."],
+  ["Approved medicines only", "Repurposing is only fast if safety is already known."],
+  ["Show every step live", "People trust what they can watch."],
+  ["Compare against a simple no-AI rule", "A score means little without something to beat."],
+];
+
+export default function Results() {
+  const data = load<{ model?: string; run_date?: string; results: Result[] }>("eval-results.json", { results: [] });
+  const notes = load<Notes>("eval-notes.json", {});
+  const rows = data.results;
+  const n = rows.length;
+  const agentHits = rows.filter((r) => r.agent_hit).length;
+  const baseHits = rows.filter((r) => r.baseline_hit).length;
+  const cost = rows.reduce((a, r) => a + (r.cost_inr || 0), 0);
+  const hit = rows.find((r) => r.drug === notes.hit?.drug);
+  const miss = rows.find((r) => r.drug === notes.miss?.drug);
+
+  return (
+    <>
+      <h1>Results &amp; decisions</h1>
+
+      <h2>The time-travel test</h2>
+      <p>
+        We took {n || 20} medicines that are now known for treating a disease they weren&apos;t made for, like thalidomide
+        (once a sleeping pill) for the blood cancer multiple myeloma. For each one, we <strong>hid the answer</strong>: the tools
+        pretend that link was never found, and only show papers and trials from before the discovery. Then we asked: does the
+        agent still put the real medicine in its top 10?
+      </p>
+
+      {n > 0 ? (
+        <div className="card score">
+          <p>The agent found the real medicine in its top 10 for <strong>{agentHits} of {n}</strong> cases.</p>
+          <p style={{ marginBottom: 0 }}>A simple rule with no AI (&ldquo;rank medicines by how strongly their protein is linked to the disease&rdquo;) found <strong>{baseHits} of {n}</strong>.</p>
+          <p className="small muted" style={{ marginTop: 10, marginBottom: 0 }}>
+            Run on {data.run_date} with {data.model}. Total AI cost for the whole test: about ₹{Math.round(cost)}.
+          </p>
+        </div>
+      ) : (
+        <div className="notice">The test hasn&apos;t been run yet.</div>
+      )}
+
+      {n > 0 && (
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>Disease</th><th>Hidden medicine</th><th>Agent rank</th><th>No-AI rule rank</th><th>Result</th></tr></thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr key={r.drug}>
+                  <td>{cap(r.disease)}</td>
+                  <td>{cap(r.drug)}</td>
+                  <td>{r.agent_rank ?? "not found"}</td>
+                  <td>{r.baseline_rank ?? "not found"}</td>
+                  <td><span className={`badge ${r.agent_hit ? "hit" : "miss"}`}>{r.agent_hit ? "Hit" : "Miss"}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {(hit || miss) && <h2>One hit, one miss</h2>}
+      {hit && notes.hit && <Example r={hit} why={notes.hit.why} />}
+      {miss && notes.miss && <Example r={miss} why={notes.miss.why} />}
+
+      <h2>Honest limits</h2>
+      <ul>
+        <li><strong>The AI may remember the answer.</strong> Gemini learned from today&apos;s internet, where these success stories are famous. We hide the answer from the tools, but we can&apos;t erase it from the AI&apos;s memory. The agent can only suggest medicines the tools returned, which limits this, but doesn&apos;t remove it.</li>
+        <li><strong>The databases know today&apos;s science.</strong> We switch off the parts of Open Targets that come from drug trials and from scanning research papers, because they contain the answer. The genetic and biology data that remain still include discoveries made after each medicine was repurposed.</li>
+        <li><strong>20 cases is small.</strong> It shows whether the idea works at all, not how often it would work.</li>
+        <li><strong>I am not a drug expert.</strong> I am an AI product manager. The test design and the wording here are my own, not reviewed by scientists.</li>
+        <li><strong>These are ideas for researchers to check, not treatment advice.</strong></li>
+      </ul>
+
+      <h2>Key decisions</h2>
+      <div className="table-wrap">
+        <table>
+          <thead><tr><th>Decision</th><th>Why</th></tr></thead>
+          <tbody>{DECISIONS.map(([d, w]) => <tr key={d}><td>{d}</td><td>{w}</td></tr>)}</tbody>
+        </table>
+      </div>
+
+      <h2>What&apos;s next</h2>
+      <ul>
+        <li>More test cases, including ones where repurposing was tried and failed.</li>
+        <li>Re-run the test with an older AI model whose training data stops earlier, to reduce the &ldquo;AI remembers&rdquo; problem.</li>
+        <li>Ask rare-disease researchers to rate the suggestions.</li>
+      </ul>
+    </>
+  );
+}
+
+function Example({ r, why }: { r: Result; why: string }) {
+  return (
+    <div className="card">
+      <div className="drug-head">
+        <h3>{cap(r.drug)} → {r.disease}</h3>
+        <span className={`badge ${r.agent_hit ? "hit" : "miss"}`}>{r.agent_hit ? `Hit (rank ${r.agent_rank})` : "Miss"}</span>
+      </div>
+      <p className="small muted">{r.story}</p>
+      <p>{why}</p>
+      {r.agent_top.length > 0 && <p className="small muted" style={{ marginBottom: 0 }}>Agent&apos;s top picks: {r.agent_top.slice(0, 5).map(drugName).join(", ")}</p>}
+    </div>
+  );
+}

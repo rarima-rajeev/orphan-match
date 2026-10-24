@@ -1,0 +1,122 @@
+[
+ {
+  "drug": "thalidomide",
+  "disease": "multiple myeloma",
+  "year": 1999,
+  "story": "A sedative, later tested on myeloma because it blocks new blood vessel growth."
+ },
+ {
+  "drug": "sildenafil",
+  "disease": "pulmonary arterial hypertension",
+  "year": 2000,
+  "story": "A heart and erection drug that also relaxes blood vessels in the lungs."
+ },
+ {
+  "drug": "propranolol",
+  "disease": "infantile hemangioma",
+  "year": 2008,
+  "story": "A blood pressure pill that, by chance, shrank birthmark-like tumours in babies."
+ },
+ {
+  "drug": "sirolimus",
+  "disease": "lymphangioleiomyomatosis",
+  "year": 2008,
+  "story": "A transplant drug that slows the lung disease LAM."
+ },
+ {
+  "drug": "imatinib",
+  "disease": "gastrointestinal stromal tumor",
+  "year": 2001,
+  "story": "A leukaemia drug that also blocks the faulty protein behind a rare gut cancer."
+ },
+ {
+  "drug": "everolimus",
+  "disease": "tuberous sclerosis",
+  "year": 2010,
+  "story": "A transplant and cancer drug that shrinks tumours in this genetic disease."
+ },
+ {
+  "drug": "anakinra",
+  "disease": "cryopyrin-associated periodic syndrome",
+  "year": 2003,
+  "story": "An arthritis drug that calms a rare inherited fever syndrome."
+ },
+ {
+  "drug": "colchicine",
+  "disease": "familial Mediterranean fever",
+  "year": 1972,
+  "story": "An old gout medicine that prevents attacks of this inherited fever."
+ },
+ {
+  "drug": "hydroxyurea",
+  "disease": "sickle cell anemia",
+  "year": 1984,
+  "story": "A cancer drug that boosts a protective form of haemoglobin."
+ },
+ {
+  "drug": "ruxolitinib",
+  "disease": "graft versus host disease",
+  "year": 2015,
+  "story": "A bone-marrow cancer drug that calms the immune attack after a transplant."
+ },
+ {
+  "drug": "tocilizumab",
+  "disease": "giant cell arteritis",
+  "year": 2012,
+  "story": "An arthritis drug that calms inflammation of large blood vessels in older adults."
+ },
+ {
+  "drug": "eculizumab",
+  "disease": "atypical hemolytic uremic syndrome",
+  "year": 2009,
+  "story": "A drug for one rare blood disease that also protects kidneys in another."
+ },
+ {
+  "drug": "rituximab",
+  "disease": "pemphigus vulgaris",
+  "year": 2002,
+  "story": "A lymphoma drug that clears a rare blistering skin disease."
+ },
+ {
+  "drug": "canakinumab",
+  "disease": "systemic juvenile idiopathic arthritis",
+  "year": 2010,
+  "story": "A drug for a rare fever syndrome, later used for a severe childhood arthritis."
+ },
+ {
+  "drug": "alpelisib",
+  "disease": "PIK3CA-related overgrowth spectrum",
+  "year": 2018,
+  "story": "A breast cancer drug that blocks the same faulty protein behind a rare overgrowth disorder."
+ },
+ {
+  "drug": "vemurafenib",
+  "disease": "Erdheim-Chester disease",
+  "year": 2012,
+  "story": "A skin cancer drug that blocks the same faulty protein (BRAF) in a rare blood disorder."
+ },
+ {
+  "drug": "mexiletine",
+  "disease": "myotonia congenita",
+  "year": 2005,
+  "story": "A heart rhythm drug that eases muscle stiffness in a rare muscle disease."
+ },
+ {
+  "drug": "fenfluramine",
+  "disease": "Dravet syndrome",
+  "year": 2011,
+  "story": "A withdrawn diet pill that reduces seizures in a rare childhood epilepsy."
+ },
+ {
+  "drug": "nitisinone",
+  "disease": "alkaptonuria",
+  "year": 2004,
+  "story": "A drug for one rare metabolic disease that blocks the same pathway in another."
+ },
+ {
+  "drug": "dichlorphenamide",
+  "disease": "periodic paralysis",
+  "year": 1995,
+  "story": "A glaucoma drug that prevents attacks of sudden muscle weakness."
+ }
+]
