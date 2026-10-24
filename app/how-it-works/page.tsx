@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = { title: "How the agent works — Orphan Match" };
 
 const TOOLS = [
@@ -23,6 +24,8 @@ export default function HowItWorks() {
         given four tools and a goal, and it chooses its own next step, like a researcher deciding which library to visit next.
         That is what makes it an <strong>agent</strong>.
       </p>
+
+      <Image className="picture" src="/images/agent.webp" alt="Illustration: a lantern on a map, choosing between four paths to a library, a lab, an archive and a medicine shelf" width={1400} height={781} sizes="(max-width: 820px) 100vw, 788px" priority />
 
       <div className="card">
         <Diagram />

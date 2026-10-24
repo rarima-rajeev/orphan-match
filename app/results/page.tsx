@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "fs";
 import path from "path";
+import Image from "next/image";
 
 export const metadata = { title: "Results & decisions — Orphan Match" };
 
@@ -41,6 +42,7 @@ export default function Results() {
   return (
     <>
       <h1>Results &amp; decisions</h1>
+      <Image className="picture" src="/images/results.webp" alt="Illustration: an hourglass filled with medicine capsules and old research papers" width={1400} height={781} sizes="(max-width: 820px) 100vw, 788px" priority />
 
       <h2>The time-travel test</h2>
       <p>

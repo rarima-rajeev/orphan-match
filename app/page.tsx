@@ -72,12 +72,14 @@ export default function FindAMatch() {
 
   return (
     <>
-      <h1>The hidden cure</h1>
-      <p className="lead">
+      <section className="hero">
+        <h1>The hidden cure</h1>
+        <p className="lead">
         Some rare diseases might be helped by a medicine that already exists, one approved for a different illness.
         Type or say the name of a rare disease. An AI agent will search four free science databases for possible matches,
         and show you every step and every source.
-      </p>
+        </p>
+      </section>
 
       <form className="search" onSubmit={(e) => { e.preventDefault(); search(disease); }}>
         <input value={disease} onChange={(e) => setDisease(e.target.value)} placeholder="e.g. Castleman disease" aria-label="Rare disease name" />
