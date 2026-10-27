@@ -49,7 +49,7 @@ export default function HowItWorks() {
       </div>
 
       <h2>The four tools</h2>
-      <p className="muted">All four are free, public databases run by research institutes.</p>
+      <p className="muted">All four are free, public science databases.</p>
       <div className="table-wrap">
         <table>
           <thead><tr><th>Tool</th><th>What it answers</th></tr></thead>
