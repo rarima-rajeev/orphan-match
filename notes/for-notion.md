@@ -28,3 +28,70 @@
 - Could raise or lower the score; not guaranteed.
 - Risks: only a few hundred documented repurposing successes to learn from (small data); leakage (must train only on data from before each discovery year, or the backtest is meaningless); ML scores don't explain *why*.
 - Interview line: "I'd add an ML model to rank candidates quickly and cheaply, trained only on data from before each discovery to avoid leakage, and keep the agent for gathering evidence and explaining. Then I'd re-run the same backtest to see whether it actually beats 3 of 20."
+
+## Orphan Match: cost comparison (traditional IT project vs AI-assisted, one person)
+(Discussed 2026-10-27. Rough estimates from typical industry rates, not quotes. Gemini spend calculated from token counts.)
+
+### What it actually cost
+- Gemini: ~₹200 (about $2.50): 2 test runs, citation check, pictures, trial searches.
+- Claude: part of the Claude subscription (not counted).
+- Time: ~2–3 days, one person. People hired: 0.
+
+### Traditional prototype team (~6 weeks, US rates)
+| Role | Time | Rate | Cost |
+|---|---|---|---|
+| Product manager | half-time, 6 weeks | $80/h | ~$9,600 |
+| 2 software engineers | 6 weeks | $90/h | ~$43,200 |
+| Data/ML scientist (test design) | 3 weeks | $100/h | ~$12,000 |
+| Pharma expert | 1 week | $150/h | ~$6,000 |
+| Designer / illustrator | 2 weeks | $75/h | ~$6,000 |
+| Tester (QA) | 2 weeks | $60/h | ~$4,800 |
+| Total salaries | | | ~$80,000 (range $60k–100k); India-based team ~$15k–30k |
+
+### A. Building the prototype
+| Cost type | Traditional | You + Claude + Gemini |
+|---|---|---|
+| Salaries | ~$80,000 | Your time |
+| Employer overheads (+25–40%) | ~$20,000–30,000 | $0 |
+| Software and tools | ~$1,000–3,000 | Claude plan |
+| Cloud for dev/testing | ~$300–1,000 | $0 |
+| AI usage | ~$50–200 | ~$2.50 |
+| Data | $0 with free databases; commercial pharma databases ~$50k–200k+/year | $0 |
+| Total | ~$100k–115k | ~$3 + Claude plan |
+
+### B. Launching to the public
+| Cost type | Traditional | Our project |
+|---|---|---|
+| Production engineering | ~$20k–40k | Still needed (Claude helps, needs review) |
+| Security review | ~$5k–15k | Basic review; professional optional |
+| Legal and compliance | ~$3k–10k | ~$500–2,000 |
+| Pharma expert sign-off | ~$5k–10k | Still needed for a real product |
+| Domain and hosting setup | ~$100 | ~$12/year + Vercel free tier |
+| Launch marketing | ~$10k–50k+ | Portfolio: LinkedIn post, demo video, ~$0 |
+| Total | ~$45k–125k | ~$0–3k |
+
+### C. Running it for a year
+| Cost type | Traditional | Our project |
+|---|---|---|
+| Hosting | ~$1k–5k | $0–240 |
+| AI usage (~1,000 searches/month at ~₹4) | similar | ~$45/month, ~$550/year |
+| Analytics | ~$0–2k | free tier |
+| Maintenance (~20% of build/year) | ~$15k–25k | your time + Claude |
+| Customer support | ~$5k+ | n/a |
+| Total | ~$20k–35k | ~$600–800 |
+
+### Summary (first year)
+| | Traditional | You + Claude + Gemini |
+|---|---|---|
+| Prototype | ~$100k–115k | ~$3 + Claude plan |
+| Launch | ~$45k–125k | ~$0–3k |
+| Year 1 running | ~$20k–35k | ~$600–800 |
+| Total | ~$165k–275k | ~$1k–4k + Claude plan |
+
+### Honest points
+- Free public data is a hidden saving; many pharma teams pay heavily for commercial drug databases.
+- AI doesn't remove expert science review, legal checks or production security; it makes them cheaper, not zero.
+- Not apples to apples: the traditional team would also deliver expert review, production engineering, accessibility and legal review.
+
+### Interview line
+"Counting salaries, overheads, tools, launch and a year of running costs, a traditional team might spend roughly $165k–275k in the first year. My AI-assisted prototype cost under $5 to build, and running it would cost about $50 a month. The parts AI can't replace are expert review, legal and security, so that's where I'd spend the money if it went to production."
