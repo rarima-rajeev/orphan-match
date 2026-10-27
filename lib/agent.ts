@@ -40,7 +40,18 @@ export type FinalAnswer = {
   tool_calls: number;
   removed_claims: number;
   usage: { input: number; output: number };
+  work: Work;
 };
+
+// How much the agent read: records returned by tools, and the size of that text.
+export type Work = { searches: number; records: number; chars: number };
+
+export function countRecords(result: Record<string, unknown>) {
+  let n = 0;
+  for (const v of Object.values(result)) if (Array.isArray(v)) n += v.length;
+  if (result.found === true) n += 1; // one FDA label
+  return n;
+}
 
 const s = (description: string) => ({ type: "STRING", description });
 const TOOLS = [
@@ -224,6 +235,7 @@ export async function runAgent(
   const contents: Content[] = [{ role: "user", parts: [{ text: `Rare disease: ${disease}` }] }];
   const usage = { input: 0, output: 0 };
   let toolCalls = 0;
+  const work: Work = { searches: 0, records: 0, chars: 0 };
 
   for (let turn = 0; turn < MAX_TOOL_CALLS + 3; turn++) {
     const force = toolCalls >= MAX_TOOL_CALLS || turn >= MAX_TOOL_CALLS + 1;
@@ -252,6 +264,7 @@ export async function runAgent(
         tool_calls: toolCalls,
         removed_claims: removed,
         usage,
+        work,
       };
       emit({ type: "answer", answer: final });
       return final;
@@ -272,6 +285,9 @@ export async function runAgent(
       } catch (e) {
         result = { error: `Tool failed: ${(e as Error).message}` };
       }
+      work.searches++;
+      work.records += countRecords(result);
+      work.chars += JSON.stringify(result).length;
       emit({ type: "step", tool: c.name, text: `→ ${(result.summary as string) || (result.error as string) || "done"}` });
       if (toolCalls >= MAX_TOOL_CALLS) result.note = "Step limit reached. Call give_answer now.";
       responses.push({ functionResponse: { name: c.name, response: result } });
