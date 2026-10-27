@@ -8,13 +8,6 @@ const TOOLS = [
   ["openFDA", "What safety warnings are on the medicine's official US label?"],
 ];
 
-const SPLIT = [
-  ["Which 4 tools exist", "Which tool to use next"],
-  ["At most 12 tool calls per question", "What to search for"],
-  ["Only approved medicines are allowed", "When it has enough evidence"],
-  ["Every medicine and source must come from a real tool result. Anything else is removed.", "How to rank the medicines and explain why"],
-];
-
 export default function HowItWorks() {
   return (
     <>
@@ -57,19 +50,11 @@ export default function HowItWorks() {
         </table>
       </div>
 
-      <h2>What the code decides vs what the AI decides</h2>
-      <div className="table-wrap">
-        <table>
-          <thead><tr><th>The code decides (fixed rules)</th><th>Gemini decides (judgment)</th></tr></thead>
-          <tbody>{SPLIT.map(([c, g]) => <tr key={c}><td>{c}</td><td>{g}</td></tr>)}</tbody>
-        </table>
-      </div>
-
       <h2>Why an agent here, and not a fixed recipe?</h2>
       <p>
         Every rare disease is different. For one, the best clue is a protein. For another, it&apos;s an old clinical trial.
         A fixed recipe would waste steps on some diseases and miss clues on others. The trade-off: an agent is less
-        predictable, so the rules in the left-hand column above are enforced by code, not left to the AI.
+        predictable, so its key rules (the 12-step limit and the source check) are enforced by code, not left to the AI.
       </p>
       <p className="muted">
         For contrast, my other project, Phase Zero, is a fixed pipeline on purpose: there, every step must run the same way every time.
