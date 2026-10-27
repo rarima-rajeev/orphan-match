@@ -87,6 +87,32 @@ export default function Results() {
       {hit && notes.hit && <Example r={hit} why={notes.hit.why} />}
       {miss && notes.miss && <Example r={miss} why={notes.miss.why} />}
 
+      <h2>Speed and accuracy</h2>
+      <p>We timed the agent on all 20 test diseases (a second run), and checked 20 of its cited sentences against their sources.</p>
+      <div className="table-wrap">
+        <table>
+          <thead><tr><th></th><th>AI agent</th><th>Simple no-AI rule</th></tr></thead>
+          <tbody>
+            <tr><td>Found the hidden medicine</td><td>3 of 20 (run 1), 4 of 20 (run 2)</td><td>2 of 20 (both runs)</td></tr>
+            <tr><td>Time per disease</td><td>about 45 seconds</td><td>about 7 seconds</td></tr>
+            <tr><td>Records read per disease</td><td>about 41 (about 3 pages)</td><td>about 38</td></tr>
+            <tr><td>Explanation with sources</td><td>Yes, about 9 sources per answer</td><td>No, names only</td></tr>
+            <tr><td>Cost per disease</td><td>about ₹4</td><td>₹0</td></tr>
+            <tr><td>By hand (estimate)</td><td colSpan={2}>About 1–2 hours of searching and reading the same records</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style={{ marginTop: 14 }}>
+        <strong>Are the explanations accurate?</strong> Of 20 cited sentences we checked: 12 fully supported by their source,
+        7 partly (true, but overstated), and 1 not supported. The agent is reliable on simple facts (&ldquo;this medicine acts on
+        this protein&rdquo;) but tends to overstate how strong a link is. Checked by Claude, not a human expert.
+      </p>
+      <div className="card">
+        <strong>What this means:</strong> The agent is a fast research assistant: it turns hours of database searching into
+        under a minute, with sources. But it finds the right medicine only slightly more often than a free rule, and its
+        explanations need a human to double-check.
+      </div>
+
       <h2>Honest limits</h2>
       <ul>
         <li><strong>The AI may remember the answer.</strong> Gemini learned from today&apos;s internet, where these success stories are famous. We hide the answer from the tools, but we can&apos;t erase it from the AI&apos;s memory. The agent can only suggest medicines the tools returned, which limits this, but doesn&apos;t remove it.</li>

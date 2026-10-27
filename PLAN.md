@@ -52,7 +52,7 @@ Type or say the name of a rare disease. An AI agent searches 4 free public scien
 
 ## 5. Scope lock
 Exactly 3 pages. Anything new goes to the **Later** list below, not into the build.
-**Later:** deploy to Vercel · PostHog wiring · more eval cases · drug–drug interaction check · save/share results.
+**Later:** deploy to Vercel · PostHog wiring · more eval cases · drug–drug interaction check · save/share results. · daily search limit before going public (protects the Gemini budget) · code turns link scores into fixed words ("weak / moderate / strong link") so Gemini can't overstate them · ML ranking + agent explanations (hybrid).
 
 ## 6. Questions for you
 1. Approve the wording below as-is (or tell me edits)?
