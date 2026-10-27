@@ -32,7 +32,7 @@ export default function HowItWorks() {
         <p className="small muted" style={{ margin: "4px 8px 0" }}>
           * Only 4 databases are connected, but Gemini can still make things up (&ldquo;hallucinate&rdquo;) from its own
           memory: a medicine, paper or trial that no tool actually returned. The safety check is plain code, written with
-          Claude Code, and it removes anything like that before you see it. Claude itself doesn&apos;t run on this site.
+          Claude Code, and it removes anything like that before you see it.
         </p>
       </div>
 
