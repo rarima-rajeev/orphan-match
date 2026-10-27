@@ -80,7 +80,7 @@ function Diagram() {
   const code = { fill: "var(--good-soft)", stroke: "var(--good)", strokeWidth: 1.5, rx: 10 };
   const t = { fill: "var(--text)", fontSize: 14, textAnchor: "middle" as const };
   const m = { fill: "var(--muted)", fontSize: 12, textAnchor: "middle" as const };
-  const tools = ["Open Targets", "ClinicalTrials.gov", "PubMed", "openFDA"];
+  const tools = ["Open Targets", "ClinicalTrials|.gov", "PubMed", "openFDA"];
   return (
     <svg className="diagram" viewBox="0 0 640 400" role="img" aria-label="Diagram of the agent loop">
       <defs>
@@ -105,17 +105,21 @@ function Diagram() {
       <text x="320" y="66" {...t} fontWeight={700}>Gemini thinks</text>
       <text x="320" y="85" {...m}>Which tool next? Enough yet?</text>
       {/* tools */}
-      <rect x="150" y="160" width="340" height="110" {...box} />
-      <text x="320" y="182" {...m}>Gemini picks one tool, reads the answer, goes back to thinking</text>
+      <rect x="140" y="160" width="360" height="104" {...code} />
+      <text x="320" y="178" {...m}>Gemini asks for a search →</text>
+      <text x="320" y="193" {...m}>code runs it and hands back the result</text>
       {tools.map((name, i) => (
         <g key={name}>
-          <rect x={162 + i * 82} y="198" width="76" height="54" {...box} />
-          <text x={200 + i * 82} y="230" {...t} fontSize={11}>{name}</text>
+          <rect x={152 + i * 86} y="203" width="78" height="50" {...box} />
+          {name.split("|").map((line, j, all) => (
+            <text key={j} x={191 + i * 86} y={232 + (j - (all.length - 1) / 2) * 13} {...t} fontSize={11}>{line}</text>
+          ))}
         </g>
       ))}
-      <path d="M150 215 C 90 215, 90 85, 228 85" stroke="var(--accent)" strokeWidth="1.5" fill="none" markerEnd="url(#arr)" />
-      <text x="70" y="160" {...m} fill="var(--accent)">loop</text>
-      <text x="70" y="176" {...m} fill="var(--accent)">(max 12)</text>
+      <path d="M140 215 C 85 215, 85 85, 228 85" stroke="var(--accent)" strokeWidth="1.5" fill="none" markerEnd="url(#arr)" />
+      <text x="62" y="150" {...m} fill="var(--accent)">loop</text>
+      <text x="62" y="166" {...m} fill="var(--accent)">(max 12,</text>
+      <text x="62" y="182" {...m} fill="var(--accent)">set by code)</text>
       {/* answer */}
       <rect x="470" y="40" width="160" height="60" {...ai} />
       <text x="550" y="66" {...t}>&ldquo;I have enough&rdquo;</text>
