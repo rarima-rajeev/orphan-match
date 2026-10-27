@@ -1,7 +1,7 @@
 {
  "hit": {
   "drug": "propranolol",
-  "why": "The agent asked which proteins are linked to this birthmark-like growth in babies, and found ADRB2: the protein that blood-pressure pills called beta-blockers act on. Propranolol was one of 15 beta-blockers on that list. The agent checked a different one (nadolol) first, then found papers from before 2008 mentioning propranolol and hemangioma, and ranked it #1. The no-AI rule missed it. Caveat: we can't rule out that the AI recognised propranolol from memory."
+  "why": "The agent asked which proteins are linked to this birthmark-like growth in babies, and found ADRB2: the protein that blood-pressure pills called beta-blockers act on. Propranolol was one of 15 beta-blockers on that list. The agent checked a different one (nadolol) first, then searched PubMed for propranolol and ranked it #1. But the 4 papers it found from before 2008 turned out to be about unrelated conditions, so the ranking wasn't backed by real evidence. The AI most likely remembered the 2008 discovery. The no-AI rule missed it."
  },
  "miss": {
   "drug": "sirolimus",
