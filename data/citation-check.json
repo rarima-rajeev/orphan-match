@@ -1,0 +1,28 @@
+{
+ "date": "2026-10-27",
+ "method": "20 of 57 cited sentences (every third one) from 5 normal agent runs, each read against the source it cites. Checked by Claude (AI), not by a human expert.",
+ "diseases": ["Castleman disease", "Lymphangioleiomyomatosis", "Fibrodysplasia ossificans progressiva", "Myotonia congenita", "Erdheim-Chester disease"],
+ "totals": { "supported": 12, "partly": 7, "not_supported": 1 },
+ "checks": [
+  { "s": 1, "verdict": "partly", "note": "Ruxolitinib does block JAK1 (correct). But calls JAK1 'key' for Castleman; the source shows only a weak link (score 0.20)." },
+  { "s": 4, "verdict": "supported", "note": "Tofacitinib is a JAK inhibitor, as the source says." },
+  { "s": 7, "verdict": "not_supported", "note": "The paper studied IL-6 antibodies' effect on mood; sirukumab was tested in arthritis, not in Castleman patients as the sentence implies." },
+  { "s": 10, "verdict": "supported", "note": "Sirolimus acts on FKBP1A." },
+  { "s": 13, "verdict": "supported", "note": "Everolimus acts on FKBP1A." },
+  { "s": 16, "verdict": "supported", "note": "Imatinib acts on ABL1 and PDGFRB." },
+  { "s": 19, "verdict": "supported", "note": "Nintedanib acts on PDGFRB." },
+  { "s": 22, "verdict": "supported", "note": "Temsirolimus acts on FKBP1A." },
+  { "s": 25, "verdict": "supported", "note": "Imatinib acts on ABL1." },
+  { "s": 28, "verdict": "partly", "note": "Mechanism correct. 'Approved specifically for FOP' is true in reality but not in the cited source (came from memory)." },
+  { "s": 31, "verdict": "supported", "note": "Momelotinib acts on ACVR1, the protein behind FOP." },
+  { "s": 34, "verdict": "supported", "note": "Mexiletine blocks SCN4A." },
+  { "s": 37, "verdict": "supported", "note": "Lacosamide listed as acting on SCN4A." },
+  { "s": 40, "verdict": "supported", "note": "Riluzole listed as acting on SCN4A." },
+  { "s": 43, "verdict": "supported", "note": "Both papers name phenytoin as a treatment option for myotonia congenita." },
+  { "s": 46, "verdict": "partly", "note": "BRAF is linked to Erdheim-Chester, but 'strongly' overstates the source's score (0.21)." },
+  { "s": 49, "verdict": "partly", "note": "Calls MEK1 'key'; the source shows a weak link (score 0.10)." },
+  { "s": 52, "verdict": "partly", "note": "'Key growth signals' is more than the weak link (0.10) in the source shows." },
+  { "s": 55, "verdict": "partly", "note": "'Primary driver in many cases' is true in reality, but the source only gives a link score." },
+  { "s": 57, "verdict": "partly", "note": "The phase 2 Erdheim-Chester trial is real; the 'phase 3' trial cited is a broad cancer trial, not specific to this disease." }
+ ]
+}

@@ -1,0 +1,1081 @@
+[
+ {
+  "disease": "Castleman disease",
+  "overall": "Castleman disease pathogenesis is heavily driven by interleukin-6 and downstream JAK/STAT inflammatory signaling. Ruxolitinib represents the strongest repurposed candidate with active clinical trial evaluation and supporting case literature, alongside established therapies targeting IL-6 such as siltuximab.",
+  "thin_evidence": false,
+  "drugs": [
+   {
+    "rank": 1,
+    "drug_id": "CHEMBL1789941",
+    "name": "RUXOLITINIB",
+    "approved_for": "acquired polycythemia vera, essential thrombocythemia, myelofibrosis, chronic graft versus host disease, neoplasm",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Janus kinase 1 (JAK1) is a key inflammatory signalling enzyme linked to Castleman disease, and ruxolitinib directly inhibits it.",
+      "sources": [
+       {
+        "id": "OT:EFO_1001332:ENSG00000162434",
+        "label": "Open Targets: JAK1 ↔ Giant Lymph Node Hyperplasia",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000162434/EFO_1001332"
+       },
+       {
+        "id": "OT:CHEMBL1789941",
+        "label": "Open Targets: RUXOLITINIB acts on JAK1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1789941"
+       }
+      ]
+     },
+     {
+      "text": "Clinical case reports demonstrate that patients with refractory idiopathic multicentric Castleman disease improved when treated with ruxolitinib.",
+      "sources": [
+       {
+        "id": "PMID:38356196",
+        "label": "PubMed 38356196: Ruxolitinib for the Treatment of Refractory Idiopathic Multicentric Castleman Disease: A Case Report.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38356196/"
+       },
+       {
+        "id": "PMID:34302703",
+        "label": "PubMed 34302703: Idiopathic multicentric Castleman disease with TAFRO clinical subtype responsive to IL-6/JAK inhibition: A pediatric case series.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34302703/"
+       }
+      ]
+     },
+     {
+      "text": "A phase 2 clinical trial is actively testing ruxolitinib in patients with previously treated idiopathic multicentric Castleman disease.",
+      "sources": [
+       {
+        "id": "NCT07085039",
+        "label": "ClinicalTrials.gov NCT07085039: Ruxolitinib in Previously Treated Idiopathic Multicentric Castleman Disease",
+        "url": "https://clinicaltrials.gov/study/NCT07085039"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Boxed warning for serious infections, mortality, malignancy, major cardiovascular events, and blood clots (thrombosis).",
+    "safety_source": {
+     "id": "FDA:24da5509-6631-4795-9d42-273faecd08e7",
+     "label": "FDA label: OPZELURA",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=24da5509-6631-4795-9d42-273faecd08e7"
+    }
+   },
+   {
+    "rank": 2,
+    "drug_id": "CHEMBL221959",
+    "name": "TOFACITINIB",
+    "approved_for": "rheumatoid arthritis",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Tofacitinib acts as a Janus kinase inhibitor targeting JAK proteins involved in cytokine-driven immune hyperactivity.",
+      "sources": [
+       {
+        "id": "OT:EFO_1001332:ENSG00000162434",
+        "label": "Open Targets: JAK1 ↔ Giant Lymph Node Hyperplasia",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000162434/EFO_1001332"
+       },
+       {
+        "id": "OT:CHEMBL221959",
+        "label": "Open Targets: TOFACITINIB acts on JAK1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL221959"
+       }
+      ]
+     },
+     {
+      "text": "Case evidence indicates successful treatment of Castleman disease when tofacitinib is added to standard therapy.",
+      "sources": [
+       {
+        "id": "PMID:36312499",
+        "label": "PubMed 36312499: Glucocorticoids combined with tofacitinib in the treatment of Castleman's disease: A case report.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36312499/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 3,
+    "drug_id": "CHEMBL1743071",
+    "name": "SIRUKUMAB",
+    "approved_for": "immune system disorder",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Interleukin-6 (IL-6) is the primary driver protein in Castleman disease pathogenesis, and sirukumab is an antibody that directly neutralizes IL-6.",
+      "sources": [
+       {
+        "id": "OT:EFO_1001332:ENSG00000136244",
+        "label": "Open Targets: IL6 ↔ Giant Lymph Node Hyperplasia",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000136244/EFO_1001332"
+       },
+       {
+        "id": "OT:CHEMBL1743071",
+        "label": "Open Targets: SIRUKUMAB acts on IL6",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1743071"
+       }
+      ]
+     },
+     {
+      "text": "Studies evaluating IL-6-neutralizing antibodies like sirukumab have included patients with multicentric Castleman disease to control systemic symptoms.",
+      "sources": [
+       {
+        "id": "PMID:28676350",
+        "label": "PubMed 28676350: The effects of interleukin-6 neutralizing antibodies on symptoms of depressed mood and anhedonia in patients with rheumatoid arthritis and multicentric Castleman's disease.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28676350/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 4,
+    "drug_id": "CHEMBL1743070",
+    "name": "SILTUXIMAB",
+    "approved_for": "immune system disorder, Giant Lymph Node Hyperplasia, anemia, idiopathic multicentric Castleman disease",
+    "already_approved_here": true,
+    "steps": [
+     {
+      "text": "Siltuximab is an approved monoclonal antibody that binds to and neutralizes interleukin-6, the central driver of Castleman disease.",
+      "sources": [
+       {
+        "id": "OT:EFO_1001332:ENSG00000136244",
+        "label": "Open Targets: IL6 ↔ Giant Lymph Node Hyperplasia",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000136244/EFO_1001332"
+       },
+       {
+        "id": "OT:CHEMBL1743070",
+        "label": "Open Targets: SILTUXIMAB acts on IL6",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1743070"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Warnings include risk of concurrent active severe infections and caution against live vaccines.",
+    "safety_source": {
+     "id": "FDA:8d663642-f52e-49c0-a023-2da083fdfc0b",
+     "label": "FDA label: Sylvant",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8d663642-f52e-49c0-a023-2da083fdfc0b"
+    }
+   }
+  ],
+  "tool_calls": 11,
+  "removed_claims": 0,
+  "usage": {
+   "input": 50174,
+   "output": 1249
+  },
+  "work": {
+   "searches": 11,
+   "records": 48,
+   "chars": 11200
+  }
+ },
+ {
+  "disease": "lymphangioleiomyomatosis",
+  "overall": "Strong evidence from multiple clinical trials and published literature supports mTOR-pathway inhibitors (such as sirolimus and everolimus) as well as receptor tyrosine kinase inhibitors (such as imatinib and nintedanib) for treating lymphangioleiomyomatosis.",
+  "thin_evidence": false,
+  "drugs": [
+   {
+    "rank": 1,
+    "drug_id": "CHEMBL413",
+    "name": "SIROLIMUS",
+    "approved_for": "plasma cell myeloma, kidney transplant, Gorham-Stout disease, vascular malformation, lymphangiectasis",
+    "already_approved_here": true,
+    "steps": [
+     {
+      "text": "Lymphangioleiomyomatosis is linked to FKBP1A and MTOR signaling pathway disruption.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0011705:ENSG00000088832",
+        "label": "Open Targets: FKBP1A ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000088832/MONDO_0011705"
+       },
+       {
+        "id": "OT:MONDO_0011705:ENSG00000198793",
+        "label": "Open Targets: MTOR ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000198793/MONDO_0011705"
+       }
+      ]
+     },
+     {
+      "text": "Sirolimus acts as an FKBP1A inhibitor to block mTOR signaling.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL413",
+        "label": "Open Targets: SIROLIMUS acts on FKBP1A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL413"
+       }
+      ]
+     },
+     {
+      "text": "Multiple clinical trials have evaluated sirolimus safety and efficacy in patients with lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "NCT03253913",
+        "label": "ClinicalTrials.gov NCT03253913: Resveratrol and Sirolimus in Lymphangioleiomyomatosis Trial",
+        "url": "https://clinicaltrials.gov/study/NCT03253913"
+       },
+       {
+        "id": "NCT02432560",
+        "label": "ClinicalTrials.gov NCT02432560: Safety and Durability of Sirolimus for Treatment of LAM",
+        "url": "https://clinicaltrials.gov/study/NCT02432560"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Boxed warning for immunosuppression leading to increased infection risk and malignancy, and is not recommended in liver or lung transplant patients.",
+    "safety_source": {
+     "id": "FDA:09f24e7a-0bea-4e02-b557-c60eb842d41a",
+     "label": "FDA label: sirolimus",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=09f24e7a-0bea-4e02-b557-c60eb842d41a"
+    }
+   },
+   {
+    "rank": 2,
+    "drug_id": "CHEMBL1908360",
+    "name": "EVEROLIMUS",
+    "approved_for": "pancreatic neoplasm, kidney angiomyolipoma, astrocytoma (excluding glioblastoma), tuberous sclerosis, angiomyolipoma",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Lymphangioleiomyomatosis is strongly associated with the protein FKBP1A.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0011705:ENSG00000088832",
+        "label": "Open Targets: FKBP1A ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000088832/MONDO_0011705"
+       }
+      ]
+     },
+     {
+      "text": "Everolimus targets FKBP1A to inhibit downstream mTOR activity.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL1908360",
+        "label": "Open Targets: EVEROLIMUS acts on FKBP1A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1908360"
+       }
+      ]
+     },
+     {
+      "text": "Completed Phase 2 clinical trials demonstrated the effectiveness and safety of everolimus in lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "NCT01059318",
+        "label": "ClinicalTrials.gov NCT01059318: A Study to Determine the Safety and Effectiveness of RAD001 (Everolimus) in Patients With Lymphangioleiomyomatosis",
+        "url": "https://clinicaltrials.gov/study/NCT01059318"
+       },
+       {
+        "id": "NCT00457964",
+        "label": "ClinicalTrials.gov NCT00457964: RAD001 Therapy of Angiomyolipomata in Patients With TS Complex and Sporadic LAM",
+        "url": "https://clinicaltrials.gov/study/NCT00457964"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Warnings for non-infectious pneumonitis, severe infections, and angioedema.",
+    "safety_source": {
+     "id": "FDA:01f7b5fb-be0d-4adf-acd2-6899018de966",
+     "label": "FDA label: Everolimus",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=01f7b5fb-be0d-4adf-acd2-6899018de966"
+    }
+   },
+   {
+    "rank": 3,
+    "drug_id": "CHEMBL941",
+    "name": "IMATINIB",
+    "approved_for": "neoplasm, hypereosinophilic syndrome, myelodysplastic/myeloproliferative disease, chronic myeloid leukemia, gastrointestinal stromal tumor",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "The disease shows significant biological links to PDGFRB and ABL1 kinases.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0011705:ENSG00000113721",
+        "label": "Open Targets: PDGFRB ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000113721/MONDO_0011705"
+       },
+       {
+        "id": "OT:MONDO_0011705:ENSG00000097007",
+        "label": "Open Targets: ABL1 ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000097007/MONDO_0011705"
+       }
+      ]
+     },
+     {
+      "text": "Imatinib is an approved tyrosine-protein kinase inhibitor that targets both PDGFRB and ABL1.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL941",
+        "label": "Open Targets: IMATINIB acts on PDGFRB",
+        "url": "https://platform.opentargets.org/drug/CHEMBL941"
+       }
+      ]
+     },
+     {
+      "text": "Imatinib has been studied in completed Phase 1/2 trials and ongoing safety trials for lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "NCT03131999",
+        "label": "ClinicalTrials.gov NCT03131999: LAM Pilot Study With Imatinib Mesylate",
+        "url": "https://clinicaltrials.gov/study/NCT03131999"
+       },
+       {
+        "id": "NCT06889168",
+        "label": "ClinicalTrials.gov NCT06889168: Evaluating the Long-term Safety and Tolerability of Imatinib in Patients With Lymphangioleiomyomatosis (LAM)",
+        "url": "https://clinicaltrials.gov/study/NCT06889168"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 4,
+    "drug_id": "CHEMBL3039504",
+    "name": "NINTEDANIB ESYLATE",
+    "approved_for": "systemic sclerosis, idiopathic pulmonary fibrosis",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "The growth factor receptor PDGFRB is linked to abnormal cell proliferation in lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0011705:ENSG00000113721",
+        "label": "Open Targets: PDGFRB ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000113721/MONDO_0011705"
+       }
+      ]
+     },
+     {
+      "text": "Nintedanib esylate inhibits platelet-derived growth factor receptors including PDGFRB.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL3039504",
+        "label": "Open Targets: NINTEDANIB ESYLATE acts on PDGFRB",
+        "url": "https://platform.opentargets.org/drug/CHEMBL3039504"
+       }
+      ]
+     },
+     {
+      "text": "A Phase 2 clinical trial was conducted to evaluate nintedanib specifically in lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "NCT03062943",
+        "label": "ClinicalTrials.gov NCT03062943: A Study of Nintedanib for LymphAngioleioMyomatosis (LAM)",
+        "url": "https://clinicaltrials.gov/study/NCT03062943"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 5,
+    "drug_id": "CHEMBL1201182",
+    "name": "TEMSIROLIMUS",
+    "approved_for": "neoplasm, mantle cell lymphoma, renal cell carcinoma",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "FKBP1A is an established therapeutic target in lymphangioleiomyomatosis.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0011705:ENSG00000088832",
+        "label": "Open Targets: FKBP1A ↔ lymphangioleiomyomatosis",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000088832/MONDO_0011705"
+       }
+      ]
+     },
+     {
+      "text": "Temsirolimus binds FKBP1A to inhibit the mTOR growth pathway.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL1201182",
+        "label": "Open Targets: TEMSIROLIMUS acts on FKBP1A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1201182"
+       }
+      ]
+     },
+     {
+      "text": "Published clinical evidence shows lymphangioleiomyomatosis tumors responding to temsirolimus treatment.",
+      "sources": [
+       {
+        "id": "PMID:21263090",
+        "label": "PubMed 21263090: Response of lymphangioleiomyomatosis to a mammalian target of rapamycin inhibitor (temsirolimus) -based treatment.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21263090/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   }
+  ],
+  "tool_calls": 12,
+  "removed_claims": 0,
+  "usage": {
+   "input": 63952,
+   "output": 1658
+  },
+  "work": {
+   "searches": 12,
+   "records": 61,
+   "chars": 14423
+  }
+ },
+ {
+  "disease": "fibrodysplasia ossificans progressiva",
+  "overall": "Palovarotene is an approved targeted therapy for fibrodysplasia ossificans progressiva, while imatinib represents a promising repurposed kinase inhibitor supported by published clinical case series. Kinase inhibitors targeting ACVR1 such as momelotinib and pacritinib provide strong mechanistic rationale.",
+  "thin_evidence": false,
+  "drugs": [
+   {
+    "rank": 1,
+    "drug_id": "CHEMBL941",
+    "name": "IMATINIB",
+    "approved_for": "chronic myeloid leukemia, gastrointestinal stromal tumor",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "The ABL1 tyrosine kinase protein is linked to fibrodysplasia ossificans progressiva.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0007606:ENSG00000097007",
+        "label": "Open Targets: ABL1 ↔ fibrodysplasia ossificans progressiva",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000097007/MONDO_0007606"
+       }
+      ]
+     },
+     {
+      "text": "Imatinib is an approved oral tyrosine kinase inhibitor that targets ABL1.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL941",
+        "label": "Open Targets: IMATINIB acts on ABL1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL941"
+       }
+      ]
+     },
+     {
+      "text": "Case reports and pediatric clinical series documented reductions in flare-ups and disease activity when treating fibrodysplasia ossificans progressiva patients with imatinib.",
+      "sources": [
+       {
+        "id": "PMID:28736245",
+        "label": "PubMed 28736245: Early clinical observations on the use of imatinib mesylate in FOP: A report of seven cases.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28736245/"
+       },
+       {
+        "id": "PMID:34022457",
+        "label": "PubMed 34022457: Off-on-off-on use of imatinib in three children with fibrodysplasia ossificans progressiva.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34022457/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some",
+    "safety_note": "Can cause fluid retention, edema, cytopenias (low blood cell counts), and congestive heart failure.",
+    "safety_source": {
+     "id": "FDA:0291eca5-7a1d-4a79-30be-252224d96509",
+     "label": "FDA label: Imatinib Mesylate",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509"
+    }
+   },
+   {
+    "rank": 2,
+    "drug_id": "CHEMBL2105648",
+    "name": "PALOVAROTENE",
+    "approved_for": "fibrodysplasia ossificans progressiva",
+    "already_approved_here": true,
+    "steps": [
+     {
+      "text": "The retinoic acid receptor gamma (RARG) is strongly associated with fibrodysplasia ossificans progressiva.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0007606:ENSG00000172819",
+        "label": "Open Targets: RARG ↔ fibrodysplasia ossificans progressiva",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000172819/MONDO_0007606"
+       }
+      ]
+     },
+     {
+      "text": "Palovarotene acts as an agonist of the retinoic acid receptor gamma and is approved specifically for fibrodysplasia ossificans progressiva.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL2105648",
+        "label": "Open Targets: PALOVAROTENE acts on RARG",
+        "url": "https://platform.opentargets.org/drug/CHEMBL2105648"
+       }
+      ]
+     },
+     {
+      "text": "Multiple Phase 2 and Phase 3 clinical trials have evaluated palovarotene in patients with fibrodysplasia ossificans progressiva to prevent abnormal bone formation.",
+      "sources": [
+       {
+        "id": "NCT05027802",
+        "label": "ClinicalTrials.gov NCT05027802: A Rollover Study to Further Evaluate the Safety and Efficacy of Palovarotene Capsules in Male and Female Participants Aged ≥14 Years With Fibrodysplasia Ossificans Progressiva (FOP) Who Have Completed the Relevant Parent Studies.",
+        "url": "https://clinicaltrials.gov/study/NCT05027802"
+       },
+       {
+        "id": "NCT02279095",
+        "label": "ClinicalTrials.gov NCT02279095: An Open-Label Extension Study of Palovarotene Treatment in Fibrodysplasia Ossificans Progressiva (FOP)",
+        "url": "https://clinicaltrials.gov/study/NCT02279095"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong"
+   },
+   {
+    "rank": 3,
+    "drug_id": "CHEMBL1078178",
+    "name": "MOMELOTINIB",
+    "approved_for": "myelofibrosis, neoplasm, Splenomegaly",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Activin A receptor type 1 (ACVR1) is the primary causal gene and signaling protein mutated in fibrodysplasia ossificans progressiva.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0007606:ENSG00000115170",
+        "label": "Open Targets: ACVR1 ↔ fibrodysplasia ossificans progressiva",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000115170/MONDO_0007606"
+       }
+      ]
+     },
+     {
+      "text": "Momelotinib is an approved kinase inhibitor that binds and inhibits the ACVR1 receptor kinase pathway.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL1078178",
+        "label": "Open Targets: MOMELOTINIB acts on ACVR1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1078178"
+       }
+      ]
+     }
+    ],
+    "strength": "Weak"
+   },
+   {
+    "rank": 4,
+    "drug_id": "CHEMBL2035187",
+    "name": "PACRITINIB",
+    "approved_for": "myelofibrosis, neoplasm",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "The ACVR1 receptor is the critical driver of heterotopic bone formation in fibrodysplasia ossificans progressiva.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0007606:ENSG00000115170",
+        "label": "Open Targets: ACVR1 ↔ fibrodysplasia ossificans progressiva",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000115170/MONDO_0007606"
+       }
+      ]
+     },
+     {
+      "text": "Pacritinib is an approved kinase inhibitor known to target ACVR1 signaling.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL2035187",
+        "label": "Open Targets: PACRITINIB acts on ACVR1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL2035187"
+       }
+      ]
+     }
+    ],
+    "strength": "Weak"
+   }
+  ],
+  "tool_calls": 12,
+  "removed_claims": 0,
+  "usage": {
+   "input": 53265,
+   "output": 1291
+  },
+  "work": {
+   "searches": 12,
+   "records": 56,
+   "chars": 11995
+  }
+ },
+ {
+  "disease": "Myotonia congenita",
+  "overall": "There is strong clinical trial and clinical guideline evidence for mexiletine as a sodium channel blocker that counteracts muscle hyperexcitability in myotonia congenita, with supportive preclinical and clinical literature backing alternative sodium channel blockers such as lacosamide, riluzole, phenytoin, and tocainide.",
+  "thin_evidence": false,
+  "drugs": [
+   {
+    "rank": 1,
+    "drug_id": "CHEMBL558",
+    "name": "MEXILETINE",
+    "approved_for": "ventricular tachycardia, cardiac arrhythmia",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Mexiletine blocks the skeletal muscle sodium channel SCN4A to reduce abnormal muscle electrical firing.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0009710:ENSG00000007314",
+        "label": "Open Targets: SCN4A ↔ Thomsen and Becker disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000007314/MONDO_0009710"
+       },
+       {
+        "id": "OT:CHEMBL558",
+        "label": "Open Targets: MEXILETINE acts on SCN4A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL558"
+       }
+      ]
+     },
+     {
+      "text": "Clinical trials in patients with non-dystrophic myotonias showed mexiletine significantly relieves myotonia symptoms.",
+      "sources": [
+       {
+        "id": "NCT02045667",
+        "label": "ClinicalTrials.gov NCT02045667: Combined N-of-1 Trials Mexiletine vs Placebo in Patients With Non-Dystrophic Myotonia (NDM)",
+        "url": "https://clinicaltrials.gov/study/NCT02045667"
+       },
+       {
+        "id": "NCT02336477",
+        "label": "ClinicalTrials.gov NCT02336477: Mexiletine and Non Dystrophic Myotonias",
+        "url": "https://clinicaltrials.gov/study/NCT02336477"
+       }
+      ]
+     },
+     {
+      "text": "Published guidelines establish mexiletine as a primary first-line medical therapy for non-dystrophic myotonias including myotonia congenita.",
+      "sources": [
+       {
+        "id": "PMID:32270509",
+        "label": "PubMed 32270509: Guidelines on clinical presentation and management of nondystrophic myotonias.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32270509/"
+       },
+       {
+        "id": "PMID:20301529",
+        "label": "PubMed 20301529: Myotonia Congenita.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20301529/"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Boxed warning regarding increased mortality observed with certain antiarrhythmic agents; can cause proarrhythmic effects.",
+    "safety_source": {
+     "id": "FDA:0ff45dbf-b555-4f55-a286-98bfaea9ea29",
+     "label": "FDA label: MEXILETINE HYDROCHLORIDE",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ff45dbf-b555-4f55-a286-98bfaea9ea29"
+    }
+   },
+   {
+    "rank": 2,
+    "drug_id": "CHEMBL58323",
+    "name": "LACOSAMIDE",
+    "approved_for": "focal epilepsy, Seizure, convulsion, epilepsy",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Lacosamide acts as a sodium channel blocker that targets the SCN4A channel.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0009710:ENSG00000007314",
+        "label": "Open Targets: SCN4A ↔ Thomsen and Becker disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000007314/MONDO_0009710"
+       },
+       {
+        "id": "OT:CHEMBL58323",
+        "label": "Open Targets: LACOSAMIDE acts on SCN4A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL58323"
+       }
+      ]
+     },
+     {
+      "text": "Studies demonstrate that lacosamide enhances slow sodium channel inactivation and reduces myotonia in human and rodent muscle tissue.",
+      "sources": [
+       {
+        "id": "PMID:25515836",
+        "label": "PubMed 25515836: Sodium channel slow inactivation as a therapeutic target for myotonia congenita.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25515836/"
+       },
+       {
+        "id": "PMID:27783415",
+        "label": "PubMed 27783415: The anti-convulsants lacosamide, lamotrigine, and rufinamide reduce myotonia in isolated human and rat skeletal muscle.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27783415/"
+       }
+      ]
+     },
+     {
+      "text": "Lacosamide is evaluated in systematic reviews as an emerging therapeutic option for treating myotonia.",
+      "sources": [
+       {
+        "id": "PMID:40197813",
+        "label": "PubMed 40197813: Drug treatment for myotonia.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40197813/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some",
+    "safety_note": "May cause dizziness, ataxia, syncope, and cardiac rhythm or conduction abnormalities.",
+    "safety_source": {
+     "id": "FDA:00203a7b-e774-45f7-ac6b-48db6d32a48a",
+     "label": "FDA label: LACOSAMIDE",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00203a7b-e774-45f7-ac6b-48db6d32a48a"
+    }
+   },
+   {
+    "rank": 3,
+    "drug_id": "CHEMBL744",
+    "name": "RILUZOLE",
+    "approved_for": "amyotrophic lateral sclerosis",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Riluzole inhibits voltage-gated sodium channels including SCN4A to dampen membrane excitability.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0009710:ENSG00000007314",
+        "label": "Open Targets: SCN4A ↔ Thomsen and Becker disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000007314/MONDO_0009710"
+       },
+       {
+        "id": "OT:CHEMBL744",
+        "label": "Open Targets: RILUZOLE acts on SCN4A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL744"
+       }
+      ]
+     },
+     {
+      "text": "Preclinical studies in animal models of myotonia demonstrated that riluzole significantly reduces myotonic stiffness.",
+      "sources": [
+       {
+        "id": "PMID:24613829",
+        "label": "PubMed 24613829: Preclinical evaluation of marketed sodium channel blockers in a rat model of myotonia discloses promising antimyotonic drugs.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24613829/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 4,
+    "drug_id": "CHEMBL16",
+    "name": "PHENYTOIN",
+    "approved_for": "epilepsy, Seizure",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Phenytoin blocks voltage-gated sodium channels including SCN4A to curb hyperexcitability.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0009710:ENSG00000007314",
+        "label": "Open Targets: SCN4A ↔ Thomsen and Becker disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000007314/MONDO_0009710"
+       },
+       {
+        "id": "OT:CHEMBL16",
+        "label": "Open Targets: PHENYTOIN acts on SCN4A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL16"
+       }
+      ]
+     },
+     {
+      "text": "Clinical medical literature documents phenytoin as an established alternative membrane-stabilizing agent for managing myotonia congenita.",
+      "sources": [
+       {
+        "id": "PMID:20301529",
+        "label": "PubMed 20301529: Myotonia Congenita.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20301529/"
+       },
+       {
+        "id": "PMID:1947487",
+        "label": "PubMed 1947487: Myotonia congenita.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/1947487/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   },
+   {
+    "rank": 5,
+    "drug_id": "CHEMBL1762",
+    "name": "TOCAINIDE",
+    "approved_for": "Ventricular arrhythmia, cardiac arrhythmia",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Tocainide blocks voltage-gated sodium channels including SCN4A to stop repetitive muscle discharges.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0009710:ENSG00000007314",
+        "label": "Open Targets: SCN4A ↔ Thomsen and Becker disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000007314/MONDO_0009710"
+       },
+       {
+        "id": "OT:CHEMBL1762",
+        "label": "Open Targets: TOCAINIDE acts on SCN4A",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1762"
+       }
+      ]
+     },
+     {
+      "text": "Published clinical studies showed tocainide is effective at alleviating symptoms in non-dystrophic myotonias.",
+      "sources": [
+       {
+        "id": "PMID:1455983",
+        "label": "PubMed 1455983: Treatment of myotonia with antiarrhythmic drugs.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/1455983/"
+       },
+       {
+        "id": "PMID:3102961",
+        "label": "PubMed 3102961: Paramyotonia congenita: successful treatment with tocainide. Clinical and electrophysiologic findings in seven patients.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3102961/"
+       }
+      ]
+     }
+    ],
+    "strength": "Some"
+   }
+  ],
+  "tool_calls": 12,
+  "removed_claims": 0,
+  "usage": {
+   "input": 58928,
+   "output": 1466
+  },
+  "work": {
+   "searches": 12,
+   "records": 65,
+   "chars": 13043
+  }
+ },
+ {
+  "disease": "Erdheim-Chester disease",
+  "overall": "There is strong biological and clinical evidence supporting targeted MAPK pathway inhibitors (BRAF and MEK inhibitors) for treating Erdheim-Chester disease, supported by multiple published clinical trials and reports.",
+  "thin_evidence": false,
+  "drugs": [
+   {
+    "rank": 1,
+    "drug_id": "CHEMBL1229517",
+    "name": "VEMURAFENIB",
+    "approved_for": "neoplasm, metastatic melanoma, melanoma",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "Erdheim-Chester disease is strongly associated with alterations in the BRAF kinase protein.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0018153:ENSG00000157764",
+        "label": "Open Targets: BRAF ↔ Erdheim-Chester disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000157764/MONDO_0018153"
+       }
+      ]
+     },
+     {
+      "text": "Vemurafenib is an approved targeted inhibitor of BRAF kinase.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL1229517",
+        "label": "Open Targets: VEMURAFENIB acts on BRAF",
+        "url": "https://platform.opentargets.org/drug/CHEMBL1229517"
+       }
+      ]
+     },
+     {
+      "text": "Clinical trials and published studies have shown robust efficacy of vemurafenib in patients with BRAF-mutated Erdheim-Chester disease.",
+      "sources": [
+       {
+        "id": "NCT02089724",
+        "label": "ClinicalTrials.gov NCT02089724: Long-term Outcome After Vemurafenib / BRAF Inhibitors Interruption in Erdheim-chester Disease",
+        "url": "https://clinicaltrials.gov/study/NCT02089724"
+       },
+       {
+        "id": "NCT05768178",
+        "label": "ClinicalTrials.gov NCT05768178: DETERMINE Trial Treatment Arm 05: Vemurafenib in Combination With Cobimetinib in Adult Patients With BRAF Positive Cancers.",
+        "url": "https://clinicaltrials.gov/study/NCT05768178"
+       },
+       {
+        "id": "PMID:29188284",
+        "label": "PubMed 29188284: Vemurafenib for BRAF V600-Mutant Erdheim-Chester Disease and Langerhans Cell Histiocytosis: Analysis of Data From the Histology-Independent, Phase 2, Open-label VE-BASKET Study.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29188284/"
+       },
+       {
+        "id": "PMID:35844342",
+        "label": "PubMed 35844342: Vemurafenib in the Treatment of Erdheim Chester Disease: A Systematic Review.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35844342/"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Warnings include risks of new skin and non-skin malignancies, requiring routine monitoring.",
+    "safety_source": {
+     "id": "FDA:38eea320-7e0c-485a-bc30-98c3c45e2763",
+     "label": "FDA label: ZELBORAF",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=38eea320-7e0c-485a-bc30-98c3c45e2763"
+    }
+   },
+   {
+    "rank": 2,
+    "drug_id": "CHEMBL2146883",
+    "name": "COBIMETINIB",
+    "approved_for": "neoplasm, melanoma",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "MAP2K1 (MEK1) is a key signaling protein downstream in the pathway driving Erdheim-Chester disease.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0018153:ENSG00000169032",
+        "label": "Open Targets: MAP2K1 ↔ Erdheim-Chester disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000169032/MONDO_0018153"
+       }
+      ]
+     },
+     {
+      "text": "Cobimetinib is an approved inhibitor of the MAP2K1 kinase enzyme.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL2146883",
+        "label": "Open Targets: COBIMETINIB acts on MAP2K1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL2146883"
+       }
+      ]
+     },
+     {
+      "text": "Multiple clinical trials and medical reports show substantial disease improvement with cobimetinib in Erdheim-Chester disease.",
+      "sources": [
+       {
+        "id": "NCT04079179",
+        "label": "ClinicalTrials.gov NCT04079179: Cobimetinib in Refractory Langerhans Cell Histiocytosis (LCH), and Other Histiocytic Disorders",
+        "url": "https://clinicaltrials.gov/study/NCT04079179"
+       },
+       {
+        "id": "PMID:38614902",
+        "label": "PubMed 38614902: Resolution of cardiac involvement with cobimetinib in Erdheim-Chester disease.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38614902/"
+       },
+       {
+        "id": "PMID:39840501",
+        "label": "PubMed 39840501: Erdheim-Chester Disease With Significant Response of Large Vessel Disease to Cobimetinib Monotherapy.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39840501/"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong",
+    "safety_note": "Warnings include risks of new primary malignancies, major bleeding events, and cardiomyopathy.",
+    "safety_source": {
+     "id": "FDA:c387579e-cee0-4334-bd1e-73f93ac1bde6",
+     "label": "FDA label: Cotellic",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c387579e-cee0-4334-bd1e-73f93ac1bde6"
+    }
+   },
+   {
+    "rank": 3,
+    "drug_id": "CHEMBL2103875",
+    "name": "TRAMETINIB",
+    "approved_for": "glioma, melanoma, metastatic melanoma, neoplasm",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "The MAP2K1/MAP2K2 pathway provides key growth signals in Erdheim-Chester disease lesions.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0018153:ENSG00000169032",
+        "label": "Open Targets: MAP2K1 ↔ Erdheim-Chester disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000169032/MONDO_0018153"
+       }
+      ]
+     },
+     {
+      "text": "Trametinib blocks MAP2K1 and MAP2K2 signaling enzymes.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL2103875",
+        "label": "Open Targets: TRAMETINIB acts on MAP2K1",
+        "url": "https://platform.opentargets.org/drug/CHEMBL2103875"
+       }
+      ]
+     },
+     {
+      "text": "Clinical trials have directly tested trametinib in Erdheim-Chester disease patients.",
+      "sources": [
+       {
+        "id": "NCT02281760",
+        "label": "ClinicalTrials.gov NCT02281760: Dabrafenib and Trametinib in People With BRAF V600E Mutation Positive Lesions in Erdheim Chester Disease",
+        "url": "https://clinicaltrials.gov/study/NCT02281760"
+       },
+       {
+        "id": "NCT07440290",
+        "label": "ClinicalTrials.gov NCT07440290: DETERMINE Trial Treatment Arm 07: Dabrafenib in Combination With Trametinib in Adult, Paediatric and Teenage/Young Adult Patients With BRAF V600 Mutation-Positive Cancers.",
+        "url": "https://clinicaltrials.gov/study/NCT07440290"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong"
+   },
+   {
+    "rank": 4,
+    "drug_id": "CHEMBL2028663",
+    "name": "DABRAFENIB",
+    "approved_for": "glioma, neoplasm, melanoma",
+    "already_approved_here": false,
+    "steps": [
+     {
+      "text": "BRAF mutations are the primary driver of disease in many Erdheim-Chester disease cases.",
+      "sources": [
+       {
+        "id": "OT:MONDO_0018153:ENSG00000157764",
+        "label": "Open Targets: BRAF ↔ Erdheim-Chester disease",
+        "url": "https://platform.opentargets.org/evidence/ENSG00000157764/MONDO_0018153"
+       }
+      ]
+     },
+     {
+      "text": "Dabrafenib is an approved targeted inhibitor of BRAF kinase.",
+      "sources": [
+       {
+        "id": "OT:CHEMBL2028663",
+        "label": "Open Targets: DABRAFENIB acts on BRAF",
+        "url": "https://platform.opentargets.org/drug/CHEMBL2028663"
+       }
+      ]
+     },
+     {
+      "text": "Dabrafenib has been evaluated in phase 2 and phase 3 clinical trials specifically for Erdheim-Chester disease.",
+      "sources": [
+       {
+        "id": "NCT02281760",
+        "label": "ClinicalTrials.gov NCT02281760: Dabrafenib and Trametinib in People With BRAF V600E Mutation Positive Lesions in Erdheim Chester Disease",
+        "url": "https://clinicaltrials.gov/study/NCT02281760"
+       },
+       {
+        "id": "NCT07440290",
+        "label": "ClinicalTrials.gov NCT07440290: DETERMINE Trial Treatment Arm 07: Dabrafenib in Combination With Trametinib in Adult, Paediatric and Teenage/Young Adult Patients With BRAF V600 Mutation-Positive Cancers.",
+        "url": "https://clinicaltrials.gov/study/NCT07440290"
+       }
+      ]
+     }
+    ],
+    "strength": "Strong"
+   }
+  ],
+  "tool_calls": 12,
+  "removed_claims": 0,
+  "usage": {
+   "input": 57048,
+   "output": 1385
+  },
+  "work": {
+   "searches": 12,
+   "records": 54,
+   "chars": 12398
+  }
+ }
+]
