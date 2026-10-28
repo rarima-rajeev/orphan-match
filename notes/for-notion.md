@@ -130,3 +130,15 @@ If it ever helps find a real treatment even a year earlier, the patient value is
 
 ### Interview line
 "On the user side, the agent turns 1–2 hours of desk research into under a minute plus about 20 minutes of checking. For a pharma unit screening 2,000 diseases a year, that frees roughly 1,000–3,000 researcher hours, worth about $75k–300k, for under $100 in AI costs. I'd present that as capacity freed, not jobs cut, because our tests show a human still has to check the answers."
+
+## Orphan Match: the four tools (what each database answers)
+(Removed from the "How the agent works" page on 2026-10-28; the home page now shows database cards instead.)
+
+All four are free, public science databases.
+
+| Tool | What it answers |
+|---|---|
+| Open Targets | Which proteins are linked to this disease? Which approved medicines act on those proteins? |
+| ClinicalTrials.gov | Has anyone already tested this medicine for this disease? |
+| PubMed | Are there research papers that support the link? |
+| openFDA | What safety warnings are on the medicine's official US label? |

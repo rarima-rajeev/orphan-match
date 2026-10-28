@@ -1,13 +1,6 @@
 import Image from "next/image";
 export const metadata = { title: "How the agent works — Orphan Match" };
 
-const TOOLS = [
-  ["Open Targets", "Which proteins are linked to this disease? Which approved medicines act on those proteins?"],
-  ["ClinicalTrials.gov", "Has anyone already tested this medicine for this disease?"],
-  ["PubMed", "Are there research papers that support the link?"],
-  ["openFDA", "What safety warnings are on the medicine's official US label?"],
-];
-
 export default function HowItWorks() {
   return (
     <>
@@ -48,15 +41,6 @@ export default function HowItWorks() {
             <tr><th>Repurposing</th><td>Using a medicine already approved for one illness to treat a different one. Faster and cheaper, because its safety is already known.</td></tr>
             <tr><th>Tool call</th><td>The AI asking a database a question, like &ldquo;which proteins are linked to this disease?&rdquo;</td></tr>
           </tbody>
-        </table>
-      </div>
-
-      <h2>The four tools</h2>
-      <p className="muted">All four are free, public science databases.</p>
-      <div className="table-wrap">
-        <table>
-          <thead><tr><th>Tool</th><th>What it answers</th></tr></thead>
-          <tbody>{TOOLS.map(([t, a]) => <tr key={t}><td><strong>{t}</strong></td><td>{a}</td></tr>)}</tbody>
         </table>
       </div>
 
