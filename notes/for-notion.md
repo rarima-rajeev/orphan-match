@@ -261,3 +261,20 @@ Sources:
 | Dravet syndrome | Fenfluramine | not found | not found | Miss |
 | Alkaptonuria | Nitisinone | not found | not found | Miss |
 | Periodic paralysis | Dichlorphenamide | not found | not found | Miss |
+
+## Orphan Match: one hit, one miss (example cards)
+(Removed from the Results page on 2026-10-28. From test run 1.)
+
+### Propranolol → infantile hemangioma: Hit (rank 1)
+*A blood pressure pill that, by chance, shrank birthmark-like tumours in babies.*
+
+The agent asked which proteins are linked to this birthmark-like growth in babies, and found ADRB2: the protein that blood-pressure pills called beta-blockers act on. Propranolol was one of 15 beta-blockers on that list. The agent checked a different one (nadolol) first, then searched PubMed for propranolol and ranked it #1. But the 4 papers it found from before 2008 turned out to be about unrelated conditions, so the ranking wasn't backed by real evidence. The AI most likely remembered the 2008 discovery. The no-AI rule missed it.
+
+Agent's top picks: Propranolol, Nadolol, Metipranolol, Levobunolol, Penbutolol
+
+### Sirolimus → lymphangioleiomyomatosis: Miss
+*A transplant drug that slows the lung disease LAM.*
+
+The agent found the right protein family (mTOR), but the database lists sirolimus under a different protein, so no tool ever returned it. The telling detail: the agent searched PubMed for "sirolimus" anyway, a medicine no tool had mentioned. That is the AI remembering the answer. It still didn't list sirolimus, because its instructions say to suggest only medicines the tools returned. If it had, the code's safety check would have removed it.
+
+Agent's top picks: Ridaforolimus, Perhexiline, Sotorasib, Adagrasib

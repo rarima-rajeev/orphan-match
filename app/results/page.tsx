@@ -9,15 +9,12 @@ type Result = {
   agent_rank: number | null; agent_hit: boolean; baseline_rank: number | null; baseline_hit: boolean;
   agent_top: string[]; tool_calls: number; cost_inr: number; error?: string;
 };
-type Notes = { hit?: { drug: string; why: string }; miss?: { drug: string; why: string } };
 
 function load<T>(file: string, fallback: T): T {
   const p = path.join(process.cwd(), "data", file);
   return existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : fallback;
 }
 
-const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-const drugName = (s: string) => cap(s.toLowerCase());
 
 const DECISIONS = [
   ["An agent, not a fixed recipe", "Each rare disease needs a different search path."],
@@ -30,11 +27,8 @@ const DECISIONS = [
 
 export default function Results() {
   const data = load<{ model?: string; run_date?: string; results: Result[] }>("eval-results.json", { results: [] });
-  const notes = load<Notes>("eval-notes.json", {});
   const rows = data.results;
   const n = rows.length;
-  const hit = rows.find((r) => r.drug === notes.hit?.drug);
-  const miss = rows.find((r) => r.drug === notes.miss?.drug);
 
   return (
     <>
@@ -61,9 +55,6 @@ export default function Results() {
         learned from today&apos;s internet, so it may remember some answers. See &ldquo;Honest limits&rdquo; below.
       </p>
 
-      {(hit || miss) && <h2>One hit, one miss</h2>}
-      {hit && notes.hit && <Example r={hit} why={notes.hit.why} />}
-      {miss && notes.miss && <Example r={miss} why={notes.miss.why} />}
 
       <h2>Speed and accuracy</h2>
       <p>We timed the agent on all 20 test diseases (a second run), and checked 20 of its cited sentences against their sources.</p>
@@ -116,19 +107,5 @@ export default function Results() {
         <li>Ask rare-disease researchers to rate the suggestions.</li>
       </ul>
     </>
-  );
-}
-
-function Example({ r, why }: { r: Result; why: string }) {
-  return (
-    <div className="card">
-      <div className="drug-head">
-        <h3>{cap(r.drug)} → {r.disease}</h3>
-        <span className={`badge ${r.agent_hit ? "hit" : "miss"}`}>{r.agent_hit ? `Hit (rank ${r.agent_rank})` : "Miss"}</span>
-      </div>
-      <p className="small muted">{r.story}</p>
-      <p>{why}</p>
-      {r.agent_top.length > 0 && <p className="small muted" style={{ marginBottom: 0 }}>Agent&apos;s top picks: {r.agent_top.slice(0, 5).map(drugName).join(", ")}</p>}
-    </div>
   );
 }
