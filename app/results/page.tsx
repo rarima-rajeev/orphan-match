@@ -66,7 +66,6 @@ export default function Results() {
             <tr><td>Time per disease</td><td>about 45 seconds</td><td>about 7 seconds</td></tr>
             <tr><td>Records read per disease</td><td>about 41 (about 3 pages)</td><td>about 38</td></tr>
             <tr><td>Explanation with sources</td><td>Yes, about 9 sources per answer</td><td>No, names only</td></tr>
-            <tr><td>Cost per disease</td><td>about ₹4</td><td>₹0</td></tr>
             <tr><td>By hand (estimate)</td><td colSpan={2}>About 1–2 hours of searching and reading the same records</td></tr>
           </tbody>
         </table>

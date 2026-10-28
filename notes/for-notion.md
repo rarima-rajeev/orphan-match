@@ -278,3 +278,12 @@ Agent's top picks: Propranolol, Nadolol, Metipranolol, Levobunolol, Penbutolol
 The agent found the right protein family (mTOR), but the database lists sirolimus under a different protein, so no tool ever returned it. The telling detail: the agent searched PubMed for "sirolimus" anyway, a medicine no tool had mentioned. That is the AI remembering the answer. It still didn't list sirolimus, because its instructions say to suggest only medicines the tools returned. If it had, the code's safety check would have removed it.
 
 Agent's top picks: Ridaforolimus, Perhexiline, Sotorasib, Adagrasib
+
+## Orphan Match: cost per disease (removed from site as negligible)
+(Removed from the Results page "Speed and accuracy" table on 2026-10-28.)
+
+| | AI agent | Simple no-AI rule |
+|---|---|---|
+| Cost per disease | about ₹4 | ₹0 |
+
+A full 20-disease test run costs about ₹70–80 in Gemini usage, which is negligible.
