@@ -47,8 +47,8 @@ export default function Results() {
       <h2>Evals</h2>
       <h3 style={{ marginTop: 4 }}>The time-travel test</h3>
       <p>
-        We took {n || 20} medicines that are now known for treating a disease they weren&apos;t made for, like thalidomide
-        (once a sleeping pill) for the blood cancer multiple myeloma. For each one, we <strong>hid the answer</strong>: the tools
+        We took {n || 20} medicines that are now known for treating a disease they weren&apos;t made for, like propranolol
+        (a blood-pressure pill) for birthmark-like growths in babies. For each one, we <strong>hid the answer</strong>: the tools
         pretend that link was never found, and only show papers and trials from before the discovery. Then we asked: does the
         agent still put the real medicine in its top 10?
       </p>
