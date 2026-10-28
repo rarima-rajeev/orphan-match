@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "fs";
 import path from "path";
 import Image from "next/image";
+import { Head, Icon, Label } from "@/components/EmojiIcon";
 
 export const metadata = { title: "Results & decisions — Orphan Match" };
 
@@ -140,15 +141,6 @@ const ICONS = {
   stack: { e: "🗓️", tone: "violet" },
   search: { e: "🔍", tone: "teal" },
 };
-type Icon = { e: string; tone: string };
-
-function Head({ icon, children }: { icon: Icon; children: React.ReactNode }) {
-  return <span className="col-head"><span className={`head-icon tone-${icon.tone}`} aria-hidden="true">{icon.e}</span>{children}</span>;
-}
-
-function Label({ icon, children }: { icon: Icon; children: React.ReactNode }) {
-  return <span className="metric-label"><span className={`metric-icon tone-${icon.tone}`} aria-hidden="true">{icon.e}</span>{children}</span>;
-}
 
 const LI = { width: 20, height: 20, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
 const PROFILE_LINKS = [

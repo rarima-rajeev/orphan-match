@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Head, Label } from "@/components/EmojiIcon";
 export const metadata = { title: "How the agent works — Orphan Match" };
 
 export default function HowItWorks() {
@@ -24,12 +25,18 @@ export default function HowItWorks() {
 
       <h2>A few words, explained</h2>
       <div className="table-wrap">
-        <table>
+        <table className="metrics">
+          <thead>
+            <tr>
+              <th><Head icon={{ e: "📖", tone: "amber" }}>Word</Head></th>
+              <th><Head icon={{ e: "💡", tone: "green" }}>What it means</Head></th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><th>Rare disease</th><td>A disease so uncommon that few companies make medicines for it. Most of the ~7,000 known rare diseases have no approved treatment.</td></tr>
-            <tr><th>Protein (or &ldquo;target&rdquo;)</th><td>A tiny part of the body&apos;s machinery that a medicine latches onto to change how it works.</td></tr>
-            <tr><th>Repurposing</th><td>Using a medicine already approved for one illness to treat a different one. Faster and cheaper, because its safety is already known.</td></tr>
-            <tr><th>Tool call</th><td>The AI asking a database a question, like &ldquo;which proteins are linked to this disease?&rdquo;</td></tr>
+            <tr><td><Label icon={{ e: "🧬", tone: "rose" }}>Rare disease</Label></td><td>A disease so uncommon that few companies make medicines for it. Most of the ~7,000 known rare diseases have no approved treatment.</td></tr>
+            <tr><td><Label icon={{ e: "🧩", tone: "violet" }}>Protein (or &ldquo;target&rdquo;)</Label></td><td>A tiny part of the body&apos;s machinery that a medicine latches onto to change how it works.</td></tr>
+            <tr><td><Label icon={{ e: "♻️", tone: "green" }}>Repurposing</Label></td><td>Using a medicine already approved for one illness to treat a different one. Faster and cheaper, because its safety is already known.</td></tr>
+            <tr><td><Label icon={{ e: "🔎", tone: "sky" }}>Tool call</Label></td><td>The AI asking a database a question, like &ldquo;which proteins are linked to this disease?&rdquo;</td></tr>
           </tbody>
         </table>
       </div>
