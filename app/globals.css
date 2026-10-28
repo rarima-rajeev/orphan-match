@@ -138,3 +138,10 @@ th { color: var(--muted); font-weight: 600; }
 .metric-label { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; }
 .metric-icon { width: 30px; height: 30px; flex: none; border-radius: 9px; background: var(--accent-soft); color: var(--accent);
   display: inline-flex; align-items: center; justify-content: center; }
+.metrics { border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  background: var(--card); }
+.metrics th { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 12px 14px; }
+.metrics td { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.metrics th + th, .metrics td + td { border-left: 1px solid var(--line); }
+.metrics tbody tr:last-child td { border-bottom: none; }
+.metrics tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--accent-soft) 35%, transparent); }
