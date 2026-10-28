@@ -62,7 +62,7 @@ export default function Results() {
         <table className="metrics">
           <thead>
             <tr>
-              <th></th>
+              <th><span className="col-head">What we measured</span></th>
               <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
               <th><span className="col-head">{ICONS.code} Simple no-AI rule <span className="muted small">(plain code written by Claude)</span></span></th>
             </tr>
@@ -81,7 +81,7 @@ export default function Results() {
         <table className="metrics">
           <thead>
             <tr>
-              <th></th>
+              <th><span className="col-head">What we measured</span></th>
               <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
               <th><span className="col-head">{ICONS.code} Simple no-AI rule</span></th>
               <th><span className="col-head">{ICONS.person} A researcher by hand <span className="muted small">(estimate)</span></span></th>
