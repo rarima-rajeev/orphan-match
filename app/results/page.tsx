@@ -83,12 +83,15 @@ export default function Results() {
             <tr>
               <th></th>
               <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
+              <th><span className="col-head">{ICONS.code} Simple no-AI rule</span></th>
               <th><span className="col-head">{ICONS.person} A researcher by hand <span className="muted small">(estimate)</span></span></th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><Label icon={ICONS.clock}>Time per disease</Label></td><td>about 45 seconds</td><td>about 1–2 hours</td></tr>
-            <tr><td><Label icon={ICONS.pages}>Records read</Label></td><td>about 41</td><td>the same ~41, found and read one by one</td></tr>
+            <tr><td><Label icon={ICONS.clock}>Time per disease</Label></td><td>about 45 seconds</td><td>about 7 seconds</td><td>about 1–2 hours</td></tr>
+            <tr><td><Label icon={ICONS.stack}>Time for all 20 test diseases</Label></td><td>about 15 minutes</td><td>about 2.5 minutes</td><td>about 20–40 hours (3–5 working days)</td></tr>
+            <tr><td><Label icon={ICONS.pages}>Records read per disease</Label></td><td>about 41</td><td>about 38</td><td>the same ~41, found and read one by one</td></tr>
+            <tr><td><Label icon={ICONS.search}>Choosing the 20 test cases</Label></td><td colSpan={2}>Not part of the test itself: Claude Code picked them in a few minutes</td><td>about 1–2 days of reading medical history</td></tr>
           </tbody>
         </table>
       </div>
@@ -140,6 +143,8 @@ const ICONS = {
   clock: <svg {...IC}><circle cx="12" cy="12" r="8" /><path d="M12 8v4l3 2" /></svg>,
   pages: <svg {...IC}><path d="M7 4h8l3 3v13H7z" /><path d="M10 11h5M10 14h5M10 17h3" /></svg>,
   quote: <svg {...IC}><path d="M5 6h14v9H9l-4 4z" /><path d="M9 10h6" /></svg>,
+  stack: <svg {...IC}><path d="M12 4l8 4-8 4-8-4z" /><path d="M4 12l8 4 8-4M4 16l8 4 8-4" /></svg>,
+  search: <svg {...IC}><circle cx="11" cy="11" r="6" /><path d="M20 20l-4.5-4.5" /></svg>,
 };
 
 function Label({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
