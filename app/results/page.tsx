@@ -17,12 +17,12 @@ function load<T>(file: string, fallback: T): T {
 
 
 const DECISIONS = [
-  ["An agent, not a fixed recipe", "Each rare disease needs a different search path."],
-  ["A hard cap of 12 tool calls", "Keeps cost and waiting time predictable."],
-  ["Code checks every source", "AI can invent sources. Code can't be talked out of a rule."],
-  ["Approved medicines only", "Repurposing is only fast if safety is already known."],
-  ["Show every step live", "People trust what they can watch."],
-  ["Compare against a simple no-AI rule", "A score means little without something to beat."],
+  ["Let the AI choose its own search steps", "Every rare disease is different, so a fixed list of steps would miss clues."],
+  ["Stop after 12 searches", "Keeps each answer under a minute and cheap to run."],
+  ["Code double-checks every source", "If the AI makes up a medicine or a paper, the code removes it before you see it."],
+  ["Only suggest medicines that are already approved", "Their safety is already known, so they could reach patients much faster."],
+  ["Show each step as it happens", "People trust an answer more when they can see how it was found."],
+  ["Test it against a simple method with no AI", "Shows whether the AI is really adding anything."],
 ];
 
 export default function Results() {
@@ -112,7 +112,7 @@ export default function Results() {
       <h2>Key decisions</h2>
       <div className="table-wrap">
         <table>
-          <thead><tr><th>Decision</th><th>Why</th></tr></thead>
+          <thead><tr><th>What we decided</th><th>Why</th></tr></thead>
           <tbody>{DECISIONS.map(([d, w]) => <tr key={d}><td>{d}</td><td>{w}</td></tr>)}</tbody>
         </table>
       </div>
