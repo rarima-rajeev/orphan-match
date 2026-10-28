@@ -230,3 +230,34 @@ Sources:
 - **Enhancement:** cross-reference the 20 cases against repoDB, pick future cases from it, and verify each cutoff year against the earliest PubMed paper (free). Then optionally re-run the backtest (about ₹70).
 - **No rule requires eval cases to come from the project's own sources.** Good practice is the opposite: test cases from outside the system, with known answers, hidden during the test, compared against a baseline, and with the selection method stated openly.
 - **Interview line:** "I hand-picked 20 well-documented repurposing successes and set each discovery year from published evidence. Next I'd source the cases from a public repurposing dataset like repoDB and verify every cutoff year, so the selection can't bias the score."
+
+## Orphan Match: time-travel test, run 1 score and full results table
+(Removed from the Results page on 2026-10-28 to keep it uncluttered. Run on 2026-10-24 with gemini-3.8-flash.)
+
+- The agent found the real medicine in its top 10 for **3 of 20** cases.
+- A simple rule with no AI ("rank medicines by how strongly their protein is linked to the disease") found **2 of 20**.
+- Total AI cost for the whole test: about ₹73.
+- Run 2 (timed, 2026-10-27): agent 4 of 20, no-AI rule 2 of 20, ₹71 (see the Speed and accuracy section on the site).
+
+| Disease | Hidden medicine | Agent rank | No-AI rule rank | Result |
+|---|---|---|---|---|
+| Multiple myeloma | Thalidomide | not found | not found | Miss |
+| Pulmonary arterial hypertension | Sildenafil | not found | not found | Miss |
+| Infantile hemangioma | Propranolol | 1 | not found | Hit |
+| Lymphangioleiomyomatosis | Sirolimus | not found | not found | Miss |
+| Gastrointestinal stromal tumor | Imatinib | not found | 9 | Miss |
+| Tuberous sclerosis | Everolimus | not found | not found | Miss |
+| Cryopyrin-associated periodic syndrome | Anakinra | not found | not found | Miss |
+| Familial Mediterranean fever | Colchicine | not found | not found | Miss |
+| Sickle cell anemia | Hydroxyurea | not found | not found | Miss |
+| Graft versus host disease | Ruxolitinib | not found | not found | Miss |
+| Giant cell arteritis | Tocilizumab | not found | not found | Miss |
+| Atypical hemolytic uremic syndrome | Eculizumab | not found | not found | Miss |
+| Pemphigus vulgaris | Rituximab | not found | not found | Miss |
+| Systemic juvenile idiopathic arthritis | Canakinumab | not found | not found | Miss |
+| PIK3CA-related overgrowth spectrum | Alpelisib | 1 | 2 | Hit |
+| Erdheim-Chester disease | Vemurafenib | not found | not found | Miss |
+| Myotonia congenita | Mexiletine | 1 | 11 | Hit |
+| Dravet syndrome | Fenfluramine | not found | not found | Miss |
+| Alkaptonuria | Nitisinone | not found | not found | Miss |
+| Periodic paralysis | Dichlorphenamide | not found | not found | Miss |

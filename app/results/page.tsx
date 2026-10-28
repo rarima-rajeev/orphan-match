@@ -33,9 +33,6 @@ export default function Results() {
   const notes = load<Notes>("eval-notes.json", {});
   const rows = data.results;
   const n = rows.length;
-  const agentHits = rows.filter((r) => r.agent_hit).length;
-  const baseHits = rows.filter((r) => r.baseline_hit).length;
-  const cost = rows.reduce((a, r) => a + (r.cost_inr || 0), 0);
   const hit = rows.find((r) => r.drug === notes.hit?.drug);
   const miss = rows.find((r) => r.drug === notes.miss?.drug);
 
@@ -63,37 +60,6 @@ export default function Results() {
         It&apos;s like checking a weather forecast against past days, when you already know what happened. One catch: Gemini
         learned from today&apos;s internet, so it may remember some answers. See &ldquo;Honest limits&rdquo; below.
       </p>
-
-      {n > 0 ? (
-        <div className="card score">
-          <p>The agent found the real medicine in its top 10 for <strong>{agentHits} of {n}</strong> cases.</p>
-          <p style={{ marginBottom: 0 }}>A simple rule with no AI (&ldquo;rank medicines by how strongly their protein is linked to the disease&rdquo;) found <strong>{baseHits} of {n}</strong>.</p>
-          <p className="small muted" style={{ marginTop: 10, marginBottom: 0 }}>
-            Run on {data.run_date} with {data.model}. Total AI cost for the whole test: about ₹{Math.round(cost)}.
-          </p>
-        </div>
-      ) : (
-        <div className="notice">The test hasn&apos;t been run yet.</div>
-      )}
-
-      {n > 0 && (
-        <div className="table-wrap">
-          <table>
-            <thead><tr><th>Disease</th><th>Hidden medicine</th><th>Agent rank</th><th>No-AI rule rank</th><th>Result</th></tr></thead>
-            <tbody>
-              {rows.map((r) => (
-                <tr key={r.drug}>
-                  <td>{cap(r.disease)}</td>
-                  <td>{cap(r.drug)}</td>
-                  <td>{r.agent_rank ?? "not found"}</td>
-                  <td>{r.baseline_rank ?? "not found"}</td>
-                  <td><span className={`badge ${r.agent_hit ? "hit" : "miss"}`}>{r.agent_hit ? "Hit" : "Miss"}</span></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
 
       {(hit || miss) && <h2>One hit, one miss</h2>}
       {hit && notes.hit && <Example r={hit} why={notes.hit.why} />}
