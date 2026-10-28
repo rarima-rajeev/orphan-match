@@ -133,11 +133,25 @@ export default function FindAMatch() {
   );
 }
 
+const ICON = { width: 26, height: 26, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+
 const DATABASES = [
-  ["PubMed", "Medical research papers", "41.3 million papers"],
-  ["ClinicalTrials.gov", "Clinical trials from around the world", "about 609,000 trials"],
-  ["openFDA", "Official US medicine labels and safety warnings", "about 263,000 labels"],
-  ["Open Targets", "Links between proteins, diseases and medicines", "about 79,000 proteins, 47,000 diseases, 22,000 medicines and 34 million pieces of evidence"],
+  {
+    name: "PubMed", big: "41.3M", unit: "research papers", what: "Medical research papers, going back decades",
+    icon: <svg {...ICON}><path d="M6 3h9l3 3v15H6z" /><path d="M15 3v3h3M9 11h6M9 14h6M9 17h4" /></svg>,
+  },
+  {
+    name: "ClinicalTrials.gov", big: "609K", unit: "clinical trials", what: "Trials registered from around the world",
+    icon: <svg {...ICON}><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4h6v3H9zM9 13l2 2 4-4" /></svg>,
+  },
+  {
+    name: "openFDA", big: "263K", unit: "medicine labels", what: "Official US labels and safety warnings",
+    icon: <svg {...ICON}><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>,
+  },
+  {
+    name: "Open Targets", big: "34M", unit: "pieces of evidence", what: "Links between ~79K proteins, ~47K diseases and ~22K medicines",
+    icon: <svg {...ICON}><circle cx="6" cy="7" r="2.5" /><circle cx="18" cy="7" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8.5 7h7M7.3 9.2l3.5 6.6M16.7 9.2l-3.5 6.6" /></svg>,
+  },
 ];
 
 function WhatItSearches() {
@@ -148,11 +162,16 @@ function WhatItSearches() {
         Every search uses four free, public science databases. The agent doesn&apos;t read all of them: it asks targeted
         questions and pulls out the few dozen most relevant records, each with a source.
       </p>
-      <div className="table-wrap">
-        <table>
-          <thead><tr><th>Database</th><th>What&apos;s in it</th><th>Size</th></tr></thead>
-          <tbody>{DATABASES.map(([n, w, sz]) => <tr key={n}><td><strong>{n}</strong></td><td>{w}</td><td>{sz}</td></tr>)}</tbody>
-        </table>
+      <div className="db-grid">
+        {DATABASES.map((d) => (
+          <div key={d.name} className="db-card">
+            <div className="db-icon">{d.icon}</div>
+            <div className="db-big">{d.big}</div>
+            <div className="db-unit">{d.unit}</div>
+            <div className="db-name">{d.name}</div>
+            <div className="db-what">{d.what}</div>
+          </div>
+        ))}
       </div>
       <p className="small muted" style={{ marginTop: 10 }}>
         Sizes checked in October 2026. In our tests, each search took about 45 seconds and pulled about 41 records from these databases.
