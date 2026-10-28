@@ -142,3 +142,25 @@ All four are free, public science databases.
 | ClinicalTrials.gov | Has anyone already tested this medicine for this disease? |
 | PubMed | Are there research papers that support the link? |
 | openFDA | What safety warnings are on the medicine's official US label? |
+
+## Orphan Match: how it narrows millions of records down to about 41
+(Removed from the "How the agent works" page on 2026-10-28 to keep the site simple.)
+
+It isn't one big search. It's a loop of small ones. Gemini asks one question, the right database ranks its best matches, the code keeps only the top few, and Gemini reads them before asking the next question. After about 11 rounds it has read roughly 41 records and writes its answer.
+
+**Diagram (top to bottom):**
+1. You click Find matches
+2. Gemini asks one question (e.g. which proteins are linked?) [Gemini decides]
+3. The right database's own search engine ranks the best matches first: PubMed (41.3M papers) · Trials registry (609K trials) · openFDA (263K labels) · Open Targets (12.5M links)
+4. Code keeps only the top few: 5 papers, 15 proteins, 5 trials [code rule] → loops back to step 2: "Gemini reads, asks next (about 11 rounds)"
+5. Gemini writes the ranked list, once it has enough (~41 records) [Gemini decides]
+6. Safety check, then you: removes anything without a source [code rule]
+
+**Who shortlists the ~41 records:**
+| Layer | Who | What it decides |
+|---|---|---|
+| 1. What to ask | Gemini (live, each search) | Which disease, which proteins, which medicines, what words to search |
+| 2. Ranking the matches | Each database's own search engine | Which results come first (Open Targets link score; PubMed "Best Match"; trials matching disease + medicine; FDA label by exact name) |
+| 3. How many to take | Our code (written with Claude Code, fixed rules) | Top 15 proteins; up to 15 approved medicines per protein; top 5 paper titles; first 5 trials; 1 FDA label excerpt; max 12 searches |
+
+**Trade-off:** fixed cut-offs keep each search fast (under a minute) and cheap (about ₹4), but can miss relevant items beyond the top few (e.g. sirolimus acts on a protein outside the top 15; only 5 paper titles read per search; trials not sorted by relevance). Interview line: "I set fixed limits for cost and speed, and my test showed where they caused misses."
