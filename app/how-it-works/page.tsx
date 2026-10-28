@@ -29,6 +29,16 @@ export default function HowItWorks() {
         </p>
       </div>
 
+      <h2>How it narrows millions of records down to about 41</h2>
+      <p>
+        It isn&apos;t one big search. It&apos;s a loop of small ones. Gemini asks one question, the right database ranks its
+        best matches, the code keeps only the top few, and Gemini reads them before asking the next question. After about
+        11 rounds it has read roughly 41 records and writes its answer.
+      </p>
+      <div className="card">
+        <SearchFlow />
+      </div>
+
       <h2>A few words, explained</h2>
       <div className="table-wrap">
         <table>
@@ -125,6 +135,73 @@ function Diagram() {
       <text x="170" y="380" fill="var(--muted)" fontSize={12}>Gemini decides</text>
       <rect x="290" y="368" width="14" height="14" {...code} rx={3} />
       <text x="310" y="380" fill="var(--muted)" fontSize={12}>Code enforces a rule</text>
+    </svg>
+  );
+}
+
+function SearchFlow() {
+  const box = { fill: "var(--card)", stroke: "var(--line)", strokeWidth: 1.5, rx: 10 };
+  const ai = { fill: "var(--accent-soft)", stroke: "var(--accent)", strokeWidth: 1.5, rx: 10 };
+  const code = { fill: "var(--good-soft)", stroke: "var(--good)", strokeWidth: 1.5, rx: 10 };
+  const t = { fill: "var(--text)", fontSize: 14, textAnchor: "middle" as const };
+  const m = { fill: "var(--muted)", fontSize: 12, textAnchor: "middle" as const };
+  const dbs = [
+    ["PubMed", "41.3M papers"],
+    ["Trials registry", "609K trials"],
+    ["openFDA", "263K labels"],
+    ["Open Targets", "12.5M links"],
+  ];
+  return (
+    <svg className="diagram" viewBox="0 0 680 630" role="img" aria-label="Diagram of how each search narrows the databases down to a few records">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="var(--muted)" />
+        </marker>
+      </defs>
+      <g stroke="var(--muted)" strokeWidth="1.5" fill="none" markerEnd="url(#arr2)">
+        <path d="M340 74 L340 106" />
+        <path d="M340 166 L340 196" />
+        <path d="M340 312 L340 342" />
+        <path d="M340 402 L340 438" />
+        <path d="M340 498 L340 528" />
+      </g>
+      <path d="M480 374 L650 374 L650 138 L484 138" stroke="var(--accent)" strokeWidth="1.5" fill="none" markerEnd="url(#arr2)" />
+      <text x="565" y="176" {...m} fill="var(--accent)">Gemini reads, asks next</text>
+      <text x="565" y="192" {...m} fill="var(--accent)">(about 11 rounds)</text>
+
+      <rect x="200" y="30" width="280" height="44" {...box} />
+      <text x="340" y="57" {...t}>You click Find matches</text>
+
+      <rect x="200" y="108" width="280" height="58" {...ai} />
+      <text x="340" y="132" {...t} fontWeight={700}>Gemini asks one question</text>
+      <text x="340" y="152" {...m}>e.g. which proteins are linked?</text>
+
+      <rect x="40" y="198" width="580" height="114" fill="none" stroke="var(--line)" strokeWidth="1.5" strokeDasharray="5 5" rx="12" />
+      <text x="330" y="219" {...m}>The right database&apos;s own search engine ranks the best matches first</text>
+      {dbs.map(([name, size], i) => (
+        <g key={name}>
+          <rect x={59 + i * 139} y="238" width="125" height="58" {...box} />
+          <text x={121 + i * 139} y="262" {...t} fontSize={13} fontWeight={700}>{name}</text>
+          <text x={121 + i * 139} y="281" {...m}>{size}</text>
+        </g>
+      ))}
+
+      <rect x="200" y="344" width="280" height="58" {...code} />
+      <text x="340" y="368" {...t} fontWeight={700}>Code keeps only the top few</text>
+      <text x="340" y="388" {...m}>5 papers, 15 proteins, 5 trials</text>
+
+      <rect x="200" y="440" width="280" height="58" {...ai} />
+      <text x="340" y="464" {...t} fontWeight={700}>Gemini writes the ranked list</text>
+      <text x="340" y="484" {...m}>once it has enough (~41 records)</text>
+
+      <rect x="200" y="530" width="280" height="58" {...code} />
+      <text x="340" y="554" {...t} fontWeight={700}>Safety check, then you</text>
+      <text x="340" y="574" {...m}>removes anything without a source</text>
+
+      <rect x="200" y="600" width="14" height="14" {...ai} rx={3} />
+      <text x="220" y="612" fill="var(--muted)" fontSize={12}>Gemini decides</text>
+      <rect x="340" y="600" width="14" height="14" {...code} rx={3} />
+      <text x="360" y="612" fill="var(--muted)" fontSize={12}>Code enforces a rule</text>
     </svg>
   );
 }
