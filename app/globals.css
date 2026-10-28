@@ -145,3 +145,15 @@ th { color: var(--muted); font-weight: 600; }
 .metrics th + th, .metrics td + td { border-left: 1px solid var(--line); }
 .metrics tbody tr:last-child td { border-bottom: none; }
 .metrics tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--accent-soft) 35%, transparent); }
+/* Colourful icon tiles */
+.metric-icon { width: 34px; height: 34px; font-size: 18px; border-radius: 10px; }
+.head-icon { width: 26px; height: 26px; font-size: 15px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.tone-violet { background: color-mix(in srgb, #8b5cf6 18%, transparent); }
+.tone-slate { background: color-mix(in srgb, #64748b 20%, transparent); }
+.tone-teal { background: color-mix(in srgb, #14b8a6 18%, transparent); }
+.tone-rose { background: color-mix(in srgb, #f43f5e 16%, transparent); }
+.tone-sky { background: color-mix(in srgb, #0ea5e9 18%, transparent); }
+.tone-amber { background: color-mix(in srgb, #f59e0b 20%, transparent); }
+.tone-green { background: color-mix(in srgb, #22c55e 18%, transparent); }
+.metric-icon { width: 38px; height: 38px; font-size: 21px; }
+.head-icon { width: 32px; height: 32px; font-size: 19px; }

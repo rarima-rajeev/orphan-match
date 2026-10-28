@@ -63,8 +63,8 @@ export default function Results() {
           <thead>
             <tr>
               <th><span className="col-head">What we measured</span></th>
-              <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
-              <th><span className="col-head">{ICONS.code} Simple no-AI rule <span className="muted small">(plain code written by Claude)</span></span></th>
+              <th><Head icon={ICONS.sparkle}>Gemini AI agent</Head></th>
+              <th><Head icon={ICONS.code}>Simple no-AI rule <span className="muted small">(plain code written by Claude)</span></Head></th>
             </tr>
           </thead>
           <tbody>
@@ -82,9 +82,9 @@ export default function Results() {
           <thead>
             <tr>
               <th><span className="col-head">What we measured</span></th>
-              <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
-              <th><span className="col-head">{ICONS.code} Simple no-AI rule</span></th>
-              <th><span className="col-head">{ICONS.person} A researcher by hand <span className="muted small">(estimate)</span></span></th>
+              <th><Head icon={ICONS.sparkle}>Gemini AI agent</Head></th>
+              <th><Head icon={ICONS.code}>Simple no-AI rule</Head></th>
+              <th><Head icon={ICONS.person}>A researcher by hand <span className="muted small">(estimate)</span></Head></th>
             </tr>
           </thead>
           <tbody>
@@ -134,19 +134,24 @@ export default function Results() {
   );
 }
 
-const IC = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+// Colourful emoji icons, each with its own soft background tone.
 const ICONS = {
-  sparkle: <svg {...IC}><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></svg>,
-  code: <svg {...IC}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" /></svg>,
-  person: <svg {...IC}><circle cx="12" cy="8" r="3.5" /><path d="M5 20c1-4 4-6 7-6s6 2 7 6" /></svg>,
-  target: <svg {...IC}><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="0.8" /></svg>,
-  clock: <svg {...IC}><circle cx="12" cy="12" r="8" /><path d="M12 8v4l3 2" /></svg>,
-  pages: <svg {...IC}><path d="M7 4h8l3 3v13H7z" /><path d="M10 11h5M10 14h5M10 17h3" /></svg>,
-  quote: <svg {...IC}><path d="M5 6h14v9H9l-4 4z" /><path d="M9 10h6" /></svg>,
-  stack: <svg {...IC}><path d="M12 4l8 4-8 4-8-4z" /><path d="M4 12l8 4 8-4M4 16l8 4 8-4" /></svg>,
-  search: <svg {...IC}><circle cx="11" cy="11" r="6" /><path d="M20 20l-4.5-4.5" /></svg>,
+  sparkle: { e: "🤖", tone: "sky" },
+  code: { e: "⚙️", tone: "slate" },
+  person: { e: "🧑‍🔬", tone: "teal" },
+  target: { e: "🎯", tone: "rose" },
+  clock: { e: "⏱️", tone: "sky" },
+  pages: { e: "📚", tone: "amber" },
+  quote: { e: "💬", tone: "green" },
+  stack: { e: "🗓️", tone: "violet" },
+  search: { e: "🔍", tone: "teal" },
 };
+type Icon = { e: string; tone: string };
 
-function Label({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
-  return <span className="metric-label"><span className="metric-icon">{icon}</span>{children}</span>;
+function Head({ icon, children }: { icon: Icon; children: React.ReactNode }) {
+  return <span className="col-head"><span className={`head-icon tone-${icon.tone}`} aria-hidden="true">{icon.e}</span>{children}</span>;
+}
+
+function Label({ icon, children }: { icon: Icon; children: React.ReactNode }) {
+  return <span className="metric-label"><span className={`metric-icon tone-${icon.tone}`} aria-hidden="true">{icon.e}</span>{children}</span>;
 }
