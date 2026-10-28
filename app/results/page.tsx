@@ -45,12 +45,15 @@ export default function Results() {
       <Image className="picture" src="/images/results.webp" alt="Illustration: an hourglass filled with medicine capsules and old research papers" width={1400} height={781} sizes="(max-width: 820px) 100vw, 788px" priority />
 
       <h2>Evals</h2>
-      <h3 style={{ marginTop: 4 }}>The time-travel test</h3>
+      <h3 style={{ marginTop: 4 }}>The time-travel test (a backtest)</h3>
       <p>
-        We took {n || 20} medicines that are now known for treating a disease they weren&apos;t made for, like fenfluramine,
-        a weight-loss pill withdrawn in 1997 that is now approved to treat a severe childhood epilepsy. For each one, we <strong>hid the answer</strong>: the tools
-        pretend that link was never found, and only show papers and trials from before the discovery. Then we asked: does the
-        agent still put the real medicine in its top 10?
+        We picked {n || 20} medicines that later turned out to treat a different disease. For example, fenfluramine was a
+        weight-loss pill, withdrawn in 1997. Today it&apos;s approved to treat a severe childhood epilepsy.
+      </p>
+      <p>
+        For each one, we pretended it was the year before that discovery. The agent could only see papers and trials from
+        before then, and <strong>the known answer was hidden</strong>. Then we checked: did the agent still put the right
+        medicine in its top 10?
       </p>
 
       {n > 0 ? (
