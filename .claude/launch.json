@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "orphan-match", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 3000 }
+    { "name": "orphan-match", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--", "-p", "3001"], "port": 3001 }
   ]
 }
