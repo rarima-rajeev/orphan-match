@@ -99,6 +99,11 @@ export default function FindAMatch() {
         patient groups. Everyday illnesses like fever, sore throat or eczema won&apos;t work well here: they already have
         treatments, and this tool looks for a hidden cure where there isn&apos;t one yet.
       </p>
+      <p className="reach">
+        Open Targets lists about 47,000 diseases and conditions. About 7,000 known diseases are rare, and most of them have
+        no approved treatment yet. You can type most of them into the search box. If a very rare disease isn&apos;t in the
+        database, the agent will honestly say it found no match.
+      </p>
       <p className="small muted" style={{ marginBottom: 6 }}>Try one of these rare diseases:</p>
       <div className="examples">
         {EXAMPLES.map((x) => (
@@ -139,11 +144,6 @@ function WhatItSearches() {
   return (
     <section>
       <h2>What the agent searches</h2>
-      <p>
-        Open Targets lists about 47,000 diseases and conditions. About 7,000 known diseases are rare, and most of them have
-        no approved treatment yet. You can type most of them into the search box. If a very rare disease isn&apos;t in the
-        database, the agent will honestly say it found no match.
-      </p>
       <p>
         Every search uses four free, public science databases. The agent doesn&apos;t read all of them: it asks targeted
         questions and pulls out the few dozen most relevant records, each with a source.
