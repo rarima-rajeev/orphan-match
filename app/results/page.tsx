@@ -44,7 +44,8 @@ export default function Results() {
       <h1>Results &amp; decisions</h1>
       <Image className="picture" src="/images/results.webp" alt="Illustration: an hourglass filled with medicine capsules and old research papers" width={1400} height={781} sizes="(max-width: 820px) 100vw, 788px" priority />
 
-      <h2>The time-travel test</h2>
+      <h2>Evals</h2>
+      <h3 style={{ marginTop: 4 }}>The time-travel test</h3>
       <p>
         We took {n || 20} medicines that are now known for treating a disease they weren&apos;t made for, like thalidomide
         (once a sleeping pill) for the blood cancer multiple myeloma. For each one, we <strong>hid the answer</strong>: the tools
