@@ -95,3 +95,38 @@
 
 ### Interview line
 "Counting salaries, overheads, tools, launch and a year of running costs, a traditional team might spend roughly $165k–275k in the first year. My AI-assisted prototype cost under $5 to build, and running it would cost about $50 a month. The parts AI can't replace are expert review, legal and security, so that's where I'd spend the money if it went to production."
+
+## Orphan Match: user-side ROI (savings for researchers who use the tool)
+(Discussed 2026-10-28. Adds to the builder-side cost comparison above. Rough estimates, not quotes.)
+
+**Framing:** present it as researcher time freed (capacity), not "fewer researchers". Our tests show a human must still check answers (citations: 12 of 20 fully supported; hit rate 3–4 of 20). Headcount savings only at large scale; companies usually redeploy people.
+
+### Per disease
+| | By hand | With the agent |
+|---|---|---|
+| Desk research | ~1–2 hours | ~45 seconds |
+| Checking the answer | n/a | ~20–30 minutes |
+| Net time saved | | ~0.5–1.5 hours |
+| Value (US researcher fully loaded ~$75–100/hour) | | ~$40–150 per disease |
+| Tool cost | | ~₹4 (about $0.05) |
+
+### At scale, per year
+| Who | Diseases screened | Hours freed | Value | Equivalent |
+|---|---|---|---|---|
+| Small rare-disease team / patient group | ~200 | ~100–300 | ~$7,500–30,000 | ~0.1 researcher |
+| Mid-size pharma research unit | ~2,000 | ~1,000–3,000 | ~$75,000–300,000 | ~0.5–1.5 researchers |
+| All ~7,000 rare diseases, once | ~7,000 | ~3,500–10,500 | ~$260,000–1,000,000 | one-time screening project |
+
+### Tool savings (be careful)
+- Pharma teams often pay $50,000–200,000+/year for commercial drug databases.
+- This tool uses free public data but would NOT fully replace them (they hold curated and private data). Realistic claim: might reduce some licence seats or speed up early checks. No firm number.
+
+### Hidden costs on the user side
+- Wrong leads cost money: chasing a weak suggestion into a lab experiment can cost weeks and $10,000+. Hence "Weak evidence" labels and honest "no match" answers.
+- Review time (counted above).
+
+### Unquantifiable upside
+If it ever helps find a real treatment even a year earlier, the patient value is enormous, but too uncertain to put a number on. Mention as potential only.
+
+### Interview line
+"On the user side, the agent turns 1–2 hours of desk research into under a minute plus about 20 minutes of checking. For a pharma unit screening 2,000 diseases a year, that frees roughly 1,000–3,000 researcher hours, worth about $75k–300k, for under $100 in AI costs. I'd present that as capacity freed, not jobs cut, because our tests show a human still has to check the answers."
