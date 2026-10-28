@@ -47,13 +47,21 @@ export default function Results() {
       <h2>Evals</h2>
       <h3 style={{ marginTop: 4 }}>The time-travel test (a backtest)</h3>
       <p>
-        We picked {n || 20} medicines that later turned out to treat a different disease. For example, fenfluramine was a
-        weight-loss pill, withdrawn in 1997. 23 years later, in 2020, it was approved to treat a severe childhood epilepsy.
+        We picked {n || 20} medicines that later turned out to treat a different disease, some found by lucky accident, some
+        by careful science. They&apos;re well-known success stories, so we already know the right answer.
       </p>
       <p>
-        For each one, we pretended it was the year before that discovery. The agent could only see papers and trials from
-        before then, and <strong>the known answer was hidden</strong>. Then we checked: did the agent still put the right
-        medicine in its top 10?
+        For example, fenfluramine was a weight-loss pill, withdrawn in 1997. The first research showing it could help a
+        severe childhood epilepsy came out in 2011, and it was approved for that in 2020.
+      </p>
+      <p>
+        To test the agent, we turned the clock back. For fenfluramine, the agent&apos;s tools could only show papers and trials
+        from before 2011, and <strong>the known answer was hidden</strong>. Then we checked: using only that older information,
+        did the agent still put fenfluramine in its top 10? We did the same for all {n || 20} medicines.
+      </p>
+      <p>
+        It&apos;s like checking a weather forecast against past days, when you already know what happened. One catch: Gemini
+        learned from today&apos;s internet, so it may remember some answers. See &ldquo;Honest limits&rdquo; below.
       </p>
 
       {n > 0 ? (
