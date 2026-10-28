@@ -57,7 +57,11 @@ export default function Results() {
 
 
       <h2>Speed and accuracy</h2>
-      <p>We timed the agent on all 20 test diseases (a second run), and checked 20 of its cited sentences against their sources.</p>
+      <p>
+        We ran the same test twice, on the same 20 diseases. <strong>Run 1</strong> only checked whether the agent found the
+        hidden medicine. <strong>Run 2</strong> repeated it to also measure speed and how much the agent read, which run 1
+        didn&apos;t record. The scores differ slightly (3 vs 4 of 20) because an AI&apos;s answers vary a little each time.
+      </p>
       <div className="table-wrap">
         <table className="metrics">
           <thead>
