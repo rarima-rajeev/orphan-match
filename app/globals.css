@@ -130,3 +130,11 @@ th { color: var(--muted); font-weight: 600; }
 .db-unit { font-weight: 600; margin-bottom: 8px; }
 .db-name { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
 .db-what { font-size: 0.92rem; color: var(--muted); }
+
+/* Results metric tables */
+.metrics th { vertical-align: bottom; }
+.col-head { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text); }
+.col-head svg { color: var(--accent); flex: none; }
+.metric-label { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; }
+.metric-icon { width: 30px; height: 30px; flex: none; border-radius: 9px; background: var(--accent-soft); color: var(--accent);
+  display: inline-flex; align-items: center; justify-content: center; }

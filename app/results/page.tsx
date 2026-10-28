@@ -59,14 +59,36 @@ export default function Results() {
       <h2>Speed and accuracy</h2>
       <p>We timed the agent on all 20 test diseases (a second run), and checked 20 of its cited sentences against their sources.</p>
       <div className="table-wrap">
-        <table>
-          <thead><tr><th></th><th>AI agent</th><th>Simple no-AI rule</th></tr></thead>
+        <table className="metrics">
+          <thead>
+            <tr>
+              <th></th>
+              <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
+              <th><span className="col-head">{ICONS.code} Simple no-AI rule <span className="muted small">(plain code written by Claude)</span></span></th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>Found the hidden medicine</td><td>3 of 20 (run 1), 4 of 20 (run 2)</td><td>2 of 20 (both runs)</td></tr>
-            <tr><td>Time per disease</td><td>about 45 seconds</td><td>about 7 seconds</td></tr>
-            <tr><td>Records read per disease</td><td>about 41 (about 3 pages)</td><td>about 38</td></tr>
-            <tr><td>Explanation with sources</td><td>Yes, about 9 sources per answer</td><td>No, names only</td></tr>
-            <tr><td>By hand (estimate)</td><td colSpan={2}>About 1–2 hours of searching and reading the same records</td></tr>
+            <tr><td><Label icon={ICONS.target}>Found the hidden medicine</Label></td><td>3 of 20 (run 1), 4 of 20 (run 2)</td><td>2 of 20 (both runs)</td></tr>
+            <tr><td><Label icon={ICONS.clock}>Time per disease</Label></td><td>about 45 seconds</td><td>about 7 seconds</td></tr>
+            <tr><td><Label icon={ICONS.pages}>Records read per disease</Label></td><td>about 41 (about 3 pages)</td><td>about 38</td></tr>
+            <tr><td><Label icon={ICONS.quote}>Explanation with sources</Label></td><td>Yes, about 9 sources per answer</td><td>No, names only</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style={{ marginTop: 22 }}>The agent vs doing it by hand</h3>
+      <div className="table-wrap">
+        <table className="metrics">
+          <thead>
+            <tr>
+              <th></th>
+              <th><span className="col-head">{ICONS.sparkle} Gemini AI agent</span></th>
+              <th><span className="col-head">{ICONS.person} A researcher by hand <span className="muted small">(estimate)</span></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><Label icon={ICONS.clock}>Time per disease</Label></td><td>about 45 seconds</td><td>about 1–2 hours</td></tr>
+            <tr><td><Label icon={ICONS.pages}>Records read</Label></td><td>about 41</td><td>the same ~41, found and read one by one</td></tr>
           </tbody>
         </table>
       </div>
@@ -107,4 +129,19 @@ export default function Results() {
       </ul>
     </>
   );
+}
+
+const IC = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+const ICONS = {
+  sparkle: <svg {...IC}><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></svg>,
+  code: <svg {...IC}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" /></svg>,
+  person: <svg {...IC}><circle cx="12" cy="8" r="3.5" /><path d="M5 20c1-4 4-6 7-6s6 2 7 6" /></svg>,
+  target: <svg {...IC}><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="0.8" /></svg>,
+  clock: <svg {...IC}><circle cx="12" cy="12" r="8" /><path d="M12 8v4l3 2" /></svg>,
+  pages: <svg {...IC}><path d="M7 4h8l3 3v13H7z" /><path d="M10 11h5M10 14h5M10 17h3" /></svg>,
+  quote: <svg {...IC}><path d="M5 6h14v9H9l-4 4z" /><path d="M9 10h6" /></svg>,
+};
+
+function Label({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
+  return <span className="metric-label"><span className="metric-icon">{icon}</span>{children}</span>;
 }
