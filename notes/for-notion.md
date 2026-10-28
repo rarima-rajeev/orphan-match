@@ -287,3 +287,10 @@ Agent's top picks: Ridaforolimus, Perhexiline, Sotorasib, Adagrasib
 | Cost per disease | about ₹4 | ₹0 |
 
 A full 20-disease test run costs about ₹70–80 in Gemini usage, which is negligible.
+
+## Orphan Match: are the explanations accurate? + what this means
+(Removed from the Results page "Speed and accuracy" section on 2026-10-28. Full details of the check are in data/citation-check.json.)
+
+**Are the explanations accurate?** Of 20 cited sentences we checked: 12 fully supported by their source, 7 partly (true, but overstated), and 1 not supported. The agent is reliable on simple facts ("this medicine acts on this protein") but tends to overstate how strong a link is. Checked by Claude, not a human expert.
+
+**What this means:** The agent is a fast research assistant: it turns hours of database searching into under a minute, with sources. But it finds the right medicine only slightly more often than a free rule, and its explanations need a human to double-check.

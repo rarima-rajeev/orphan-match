@@ -95,16 +95,6 @@ export default function Results() {
           </tbody>
         </table>
       </div>
-      <p style={{ marginTop: 14 }}>
-        <strong>Are the explanations accurate?</strong> Of 20 cited sentences we checked: 12 fully supported by their source,
-        7 partly (true, but overstated), and 1 not supported. The agent is reliable on simple facts (&ldquo;this medicine acts on
-        this protein&rdquo;) but tends to overstate how strong a link is. Checked by Claude, not a human expert.
-      </p>
-      <div className="card">
-        <strong>What this means:</strong> The agent is a fast research assistant: it turns hours of database searching into
-        under a minute, with sources. But it finds the right medicine only slightly more often than a free rule, and its
-        explanations need a human to double-check.
-      </div>
 
       <h2>Honest limits</h2>
       <ul>
