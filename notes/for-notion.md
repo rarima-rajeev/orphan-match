@@ -164,3 +164,37 @@ It isn't one big search. It's a loop of small ones. Gemini asks one question, th
 | 3. How many to take | Our code (written with Claude Code, fixed rules) | Top 15 proteins; up to 15 approved medicines per protein; top 5 paper titles; first 5 trials; 1 FDA label excerpt; max 12 searches |
 
 **Trade-off:** fixed cut-offs keep each search fast (under a minute) and cheap (about ₹4), but can miss relevant items beyond the top few (e.g. sirolimus acts on a protein outside the top 15; only 5 paper titles read per search; trials not sorted by relevance). Interview line: "I set fixed limits for cost and speed, and my test showed where they caused misses."
+
+## Orphan Match: the 20 test medicines, before and after
+(Discussed 2026-10-28. The 20 repurposing successes used in the time-travel test.)
+
+| # | Medicine | First used for | Later also used for |
+|---|---|---|---|
+| 1 | Thalidomide | Sleeping pill and morning-sickness medicine (1950s), withdrawn for causing birth defects | A complication of leprosy, then the blood cancer multiple myeloma |
+| 2 | Sildenafil | Developed for chest pain (angina) | High blood pressure in the lungs |
+| 3 | Propranolol | Blood pressure and heart | Birthmark-like growths in babies (infantile hemangioma) |
+| 4 | Sirolimus | Preventing kidney transplant rejection | A rare lung disease (LAM) |
+| 5 | Imatinib | A blood cancer (chronic myeloid leukaemia) | A rare gut cancer (GIST) |
+| 6 | Everolimus | Transplant rejection, kidney cancer | Tumours in a genetic disease (tuberous sclerosis) |
+| 7 | Anakinra | Rheumatoid arthritis | A rare inherited fever syndrome (CAPS) |
+| 8 | Colchicine | Gout, for centuries (from the autumn crocus plant) | An inherited fever (familial Mediterranean fever) |
+| 9 | Hydroxyurea | Cancer (leukaemia) | Sickle cell anaemia |
+| 10 | Ruxolitinib | A bone-marrow cancer (myelofibrosis) | Immune attack after a transplant (graft-versus-host disease) |
+| 11 | Tocilizumab | Rheumatoid arthritis | Inflamed large blood vessels (giant cell arteritis) |
+| 12 | Eculizumab | A rare blood disease (PNH) | A rare kidney and blood disease (atypical HUS) |
+| 13 | Rituximab | Lymphoma (a blood cancer) | A blistering skin disease (pemphigus vulgaris) |
+| 14 | Canakinumab | A rare inherited fever syndrome (CAPS) | Severe childhood arthritis (systemic JIA) |
+| 15 | Alpelisib | Breast cancer | A rare overgrowth disorder (PIK3CA-related) |
+| 16 | Vemurafenib | Skin cancer (melanoma) | A rare blood disorder (Erdheim–Chester disease) |
+| 17 | Mexiletine | Irregular heartbeat | Muscle stiffness (myotonia congenita) |
+| 18 | Fenfluramine | Weight-loss pill, withdrawn in 1997 for heart-valve problems | A rare childhood epilepsy (Dravet syndrome) |
+| 19 | Nitisinone | First a weedkiller research chemical, then a rare metabolic disease (tyrosinemia) | Another rare metabolic disease (alkaptonuria) |
+| 20 | Dichlorphenamide | Glaucoma (eye pressure) | Attacks of sudden muscle weakness (periodic paralysis) |
+
+### The most fascinating stories
+1. **Thalidomide: from disaster to cure.** In the 1950s it was given to pregnant women for morning sickness and caused thousands of babies to be born with severe limb defects. Decades later it was found to treat a leprosy complication, then multiple myeloma, a blood cancer.
+2. **Fenfluramine: banned diet pill to epilepsy drug.** Withdrawn in 1997 after heart-valve damage (the "fen-phen" scandal), it returned about 20 years later, at much lower doses, as an approved treatment for a severe childhood epilepsy.
+3. **Sildenafil: from chest pain to the lungs.** Made for chest pain, it didn't work well for that, and later became a treatment for high blood pressure in the lungs.
+4. **Propranolol: noticed in one baby.** French doctors gave it to a baby for a heart problem in 2008 and saw the child's large birthmark-like growth start shrinking. It's now the standard treatment.
+5. **Nitisinone: from a weedkiller.** It came out of research into a weedkiller chemical, which turned out to block the same step in the body that goes wrong in two rare metabolic diseases.
+6. **Sirolimus: from Easter Island soil.** First found in bacteria in a soil sample from Easter Island (Rapa Nui), it became a transplant drug, and later a treatment for a rare lung disease.
