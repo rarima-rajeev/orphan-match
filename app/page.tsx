@@ -99,7 +99,7 @@ export default function FindAMatch() {
         patient groups. Everyday illnesses like fever, sore throat or eczema won&apos;t work well here: they already have
         treatments, and this tool looks for a hidden cure where there isn&apos;t one yet.
       </p>
-      <p className="reach">
+      <p className="audience">
         Open Targets lists about 47,000 diseases and conditions. About 7,000 known diseases are rare, and most of them have
         no approved treatment yet. You can type most of them into the search box. If a very rare disease isn&apos;t in the
         database, the agent will honestly say it found no match.

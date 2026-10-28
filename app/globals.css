@@ -118,4 +118,3 @@ th { color: var(--muted); font-weight: 600; }
 .example { text-align: left; display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; }
 .example span { color: var(--muted); font-size: 0.86rem; }
 .example:hover:not(:disabled) { border-color: var(--accent); }
-.reach { margin: 0 0 16px; font-size: 0.95rem; }
