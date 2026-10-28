@@ -198,3 +198,26 @@ It isn't one big search. It's a loop of small ones. Gemini asks one question, th
 4. **Propranolol: noticed in one baby.** French doctors gave it to a baby for a heart problem in 2008 and saw the child's large birthmark-like growth start shrinking. It's now the standard treatment.
 5. **Nitisinone: from a weedkiller.** It came out of research into a weedkiller chemical, which turned out to block the same step in the body that goes wrong in two rare metabolic diseases.
 6. **Sirolimus: from Easter Island soil.** First found in bacteria in a soil sample from Easter Island (Rapa Nui), it became a transplant drug, and later a treatment for a rare lung disease.
+
+## How many of today's medicines are repurposed? (published estimates)
+(Looked up 2026-10-28. Published estimates, not numbers from our 4 databases. None of the 4 databases records how a new use was found.)
+
+- **Best recent figure:** a January 2026 study (Communications Medicine) counted **451 medicines** the US FDA later approved for a new use, different from their original one, among all new medicines approved 1985–2024. Average gap between first approval and new use: **about 7 years**.
+- **As a share (my rough calculation, not stated by the study):** the FDA approved roughly 1,500 new medicines in those 40 years, so roughly **1 in 3 (about 30%)** later gained a different use.
+
+| Study | What it counted | Finding |
+|---|---|---|
+| Brain and nerve medicines (2017) | 118 medicines | Repurposed 203 times in total |
+| FDA new-use protections (2021) | 197 new medicines | 64 (32%) later got at least one new use |
+| Cambridge study | 800+ new medicines entering trials | Only about 2% launched in a completely different area than first tested |
+
+- **Most repurposing is planned,** not lucky accidents: companies deliberately test medicines for related diseases. True accidents (propranolol for baby birthmark-like growths; the weight-loss pill fenfluramine becoming an epilepsy drug) are a small, memorable subset. No reliable count of those was found.
+- **Why our test's 20 weren't drawn from the ~7,000 rare diseases:** most of those still have no treatment, so there's no known answer to test against. The 20 are hand-picked, well-documented success stories (some not even rare, e.g. multiple myeloma, sickle cell anaemia).
+- **One line to remember:** "Roughly 1 in 3 approved medicines later gains a new use, but true lucky-accident discoveries are rare, which is why tools that search for these matches systematically are interesting."
+
+Sources:
+- Communications Medicine, 451 repurposed drugs (2026): https://pmc.ncbi.nlm.nih.gov/articles/PMC12876941
+- Brain and nerve medicine repurposing review (2017): https://doaj.org/article/c3debebcc3884e70babf965b316205ee
+- FDA new-indication exclusivities study (2021): https://joppp.biomedcentral.com/articles/10.1186/s40545-020-00282-8/tables/2
+- Cambridge Judge Business School, limits of drug repurposing: https://www.jbs.cam.ac.uk/insight/2018/limits-of-drug-repurposing
+- Alzheimer's pipeline repurposing analysis: https://link.springer.com/article/10.1186/s13195-020-00662-x
