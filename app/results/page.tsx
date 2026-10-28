@@ -16,15 +16,14 @@ function load<T>(file: string, fallback: T): T {
 }
 
 
-const DECISIONS = [
-  ["Let the AI choose its own search steps", "Every rare disease is different, so a fixed list of steps would miss clues."],
-  ["Stop after 12 searches", "Keeps each answer under a minute and cheap to run."],
-  ["Code double-checks every source", "If the AI makes up a medicine or a paper, the code removes it before you see it."],
-  ["Only suggest medicines that are already approved", "Their safety is already known, so they could reach patients much faster."],
-  ["Show each step as it happens", "People trust an answer more when they can see how it was found."],
-  ["Test it against a simple method with no AI", "Shows whether the AI is really adding anything."],
+const DECISIONS: [Icon, string, string][] = [
+  [{ e: "🧭", tone: "sky" }, "Let the AI choose its own search steps", "Every rare disease is different, so a fixed list of steps would miss clues."],
+  [{ e: "🛑", tone: "rose" }, "Stop after 12 searches", "Keeps each answer under a minute and cheap to run."],
+  [{ e: "🛡️", tone: "green" }, "Code double-checks every source", "If the AI makes up a medicine or a paper, the code removes it before you see it."],
+  [{ e: "💊", tone: "amber" }, "Only suggest medicines that are already approved", "Their safety is already known, so they could reach patients much faster."],
+  [{ e: "👀", tone: "violet" }, "Show each step as it happens", "People trust an answer more when they can see how it was found."],
+  [{ e: "⚖️", tone: "slate" }, "Test it against a simple method with no AI", "Shows whether the AI is really adding anything."],
 ];
-
 export default function Results() {
   const data = load<{ model?: string; run_date?: string; results: Result[] }>("eval-results.json", { results: [] });
   const rows = data.results;
@@ -111,9 +110,9 @@ export default function Results() {
 
       <h2>Key decisions</h2>
       <div className="table-wrap">
-        <table>
-          <thead><tr><th>What we decided</th><th>Why</th></tr></thead>
-          <tbody>{DECISIONS.map(([d, w]) => <tr key={d}><td>{d}</td><td>{w}</td></tr>)}</tbody>
+        <table className="metrics">
+          <thead><tr><th><Head icon={{ e: "✅", tone: "green" }}>What we decided</Head></th><th><Head icon={{ e: "💡", tone: "amber" }}>Why</Head></th></tr></thead>
+          <tbody>{DECISIONS.map(([icon, d, w]) => <tr key={d}><td><Label icon={icon}>{d}</Label></td><td>{w}</td></tr>)}</tbody>
         </table>
       </div>
 
