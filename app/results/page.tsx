@@ -130,6 +130,7 @@ export default function Results() {
         <li><strong>The AI may remember the answer.</strong> Gemini learned from today&apos;s internet, where these success stories are famous. We hide the answer from the tools, but we can&apos;t erase it from the AI&apos;s memory. The agent can only suggest medicines the tools returned, which limits this, but doesn&apos;t remove it.</li>
         <li><strong>The databases know today&apos;s science.</strong> We switch off the parts of Open Targets that come from drug trials and from scanning research papers, because they contain the answer. The genetic and biology data that remain still include discoveries made after each medicine was repurposed.</li>
         <li><strong>20 cases is small.</strong> It shows whether the idea works at all, not how often it would work.</li>
+        <li><strong>The 20 cases were hand-picked.</strong> Claude Code, the AI coding assistant I used to build this, chose the cases and their discovery years from well-known medical history, not from an official dataset. A few discovery years are approximate, which may make the test slightly easier than it should be.</li>
         <li><strong>I am not a drug expert.</strong> I am an AI product manager. The test design and the wording here are my own, not reviewed by scientists.</li>
         <li><strong>These are ideas for researchers to check, not treatment advice.</strong></li>
       </ul>

@@ -221,3 +221,12 @@ Sources:
 - FDA new-indication exclusivities study (2021): https://joppp.biomedcentral.com/articles/10.1186/s40545-020-00282-8/tables/2
 - Cambridge Judge Business School, limits of drug repurposing: https://www.jbs.cam.ac.uk/insight/2018/limits-of-drug-repurposing
 - Alzheimer's pipeline repurposing analysis: https://link.springer.com/article/10.1186/s13195-020-00662-x
+
+## Future enhancement (eval): cross-check the test cases against repoDB
+(Discussed 2026-10-28. Not required now; the current eval stays as is, with a disclaimer on the site.)
+
+- **Current state:** the 20 backtest cases and their discovery years were hand-picked by Claude Code from well-known medical history, not from our 4 databases or an official dataset. A few years are approximate (e.g. mexiletine for myotonia, dichlorphenamide for periodic paralysis likely have earlier evidence), which may make the test slightly easier.
+- **repoDB:** an existing public dataset (Harvard, published 2017) listing medicine–disease pairs that were approved, and ones that were tried and failed. Free to download; nothing to build.
+- **Enhancement:** cross-reference the 20 cases against repoDB, pick future cases from it, and verify each cutoff year against the earliest PubMed paper (free). Then optionally re-run the backtest (about ₹70).
+- **No rule requires eval cases to come from the project's own sources.** Good practice is the opposite: test cases from outside the system, with known answers, hidden during the test, compared against a baseline, and with the selection method stated openly.
+- **Interview line:** "I hand-picked 20 well-documented repurposing successes and set each discovery year from published evidence. Next I'd source the cases from a public repurposing dataset like repoDB and verify every cutoff year, so the selection can't bias the score."
