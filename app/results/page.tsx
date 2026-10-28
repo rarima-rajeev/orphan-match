@@ -48,7 +48,7 @@ export default function Results() {
       <h3 style={{ marginTop: 4 }}>The time-travel test (a backtest)</h3>
       <p>
         We picked {n || 20} medicines that later turned out to treat a different disease. For example, fenfluramine was a
-        weight-loss pill, withdrawn in 1997. Today it&apos;s approved to treat a severe childhood epilepsy.
+        weight-loss pill, withdrawn in 1997. 23 years later, in 2020, it was approved to treat a severe childhood epilepsy.
       </p>
       <p>
         For each one, we pretended it was the year before that discovery. The agent could only see papers and trials from
