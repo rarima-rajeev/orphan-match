@@ -17,6 +17,7 @@ export default function FindAMatch() {
   const [steps, setSteps] = useState<{ text: string; kind: string }[]>([]);
   const [answer, setAnswer] = useState<FinalAnswer | null>(null);
   const [error, setError] = useState("");
+  const [limitNote, setLimitNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [listening, setListening] = useState(false);
   const [micNote, setMicNote] = useState("");
@@ -29,8 +30,14 @@ export default function FindAMatch() {
     setSteps([]);
     setAnswer(null);
     setError("");
+    setLimitNote("");
     try {
       const res = await fetch("/api/match", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ disease: name }) });
+      if (res.status === 429) {
+        setLimitNote(await res.text());
+        setBusy(false);
+        return;
+      }
       if (!res.ok || !res.body) throw new Error(await res.text());
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -124,6 +131,7 @@ export default function FindAMatch() {
         </div>
       )}
 
+      {limitNote && <div className="notice">{limitNote}</div>}
       {error && <div className="notice">Sorry, something went wrong: {error}</div>}
 
       {answer && <Answer answer={answer} />}

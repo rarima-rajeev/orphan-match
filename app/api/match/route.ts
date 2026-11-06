@@ -1,5 +1,6 @@
 // Streams the agent's steps to the browser as they happen (one JSON object per line).
 import { runAgent } from "@/lib/agent";
+import { admitSearch, visitorId } from "@/lib/limits";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
@@ -8,6 +9,9 @@ export async function POST(req: Request) {
   const { disease } = await req.json().catch(() => ({}));
   const name = typeof disease === "string" ? disease.trim().slice(0, 120) : "";
   if (!name) return new Response("Please name a disease", { status: 400 });
+
+  const admission = admitSearch(visitorId(req));
+  if (!admission.ok) return new Response(admission.message, { status: 429 });
 
   const stream = new ReadableStream({
     async start(controller) {
