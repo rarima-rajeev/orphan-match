@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Head, Label } from "@/components/EmojiIcon";
+import { RareDiseaseSources, Star } from "@/components/RareDiseaseSources";
 export const metadata = { title: "How the agent works — Orphan Match" };
 
 export default function HowItWorks() {
@@ -33,7 +34,7 @@ export default function HowItWorks() {
             </tr>
           </thead>
           <tbody>
-            <tr><td><Label icon={{ e: "🧬", tone: "rose" }}>Rare disease</Label></td><td>A disease so uncommon that few companies make medicines for it. Most of the ~7,000 known rare diseases have no approved treatment.</td></tr>
+            <tr><td><Label icon={{ e: "🧬", tone: "rose" }}>Rare disease</Label></td><td>A disease so uncommon that few companies make medicines for it. Most of the ~7,000<Star /> known rare diseases have no approved treatment.</td></tr>
             <tr><td><Label icon={{ e: "🧩", tone: "violet" }}>Protein (or &ldquo;target&rdquo;)</Label></td><td>A tiny part of the body&apos;s machinery that a medicine latches onto to change how it works.</td></tr>
             <tr><td><Label icon={{ e: "♻️", tone: "green" }}>Repurposing</Label></td><td>Using a medicine already approved for one illness to treat a different one. Faster and cheaper, because its safety is already known.</td></tr>
             <tr><td><Label icon={{ e: "🔎", tone: "sky" }}>Tool call</Label></td><td>The AI asking a database a question, like &ldquo;which proteins are linked to this disease?&rdquo;</td></tr>
@@ -51,6 +52,7 @@ export default function HowItWorks() {
         For contrast, my other project, Phase Zero, is a fixed pipeline on purpose: there, every step must run the same way every time.
         Knowing when to use which is a product decision.
       </p>
+      <RareDiseaseSources />
     </>
   );
 }

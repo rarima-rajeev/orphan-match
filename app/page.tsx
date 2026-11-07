@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import type { AgentEvent, DrugMatch, FinalAnswer } from "@/lib/agent";
 import { trackFeedback } from "@/lib/feedback";
+import { RareDiseaseSources, Star } from "@/components/RareDiseaseSources";
 
 const EXAMPLES = [
   { name: "Castleman disease", plain: "A rare immune disorder that makes lymph nodes swell" },
@@ -107,7 +108,7 @@ export default function FindAMatch() {
         treatments, and this tool looks for a hidden cure where there isn&apos;t one yet.
       </p>
       <p className="audience">
-        <strong>About 7,000 known diseases are rare</strong>, and most of them have no approved treatment yet. Open Targets
+        <strong>About 7,000<Star /> known diseases are rare</strong>, and most of them have no approved treatment yet. Open Targets
         lists about 47,000 diseases and conditions. You can type most rare ones into the search box. If a very rare disease
         isn&apos;t in the database, the agent will honestly say it found no match.
       </p>
@@ -137,6 +138,7 @@ export default function FindAMatch() {
       {answer && <Answer answer={answer} />}
 
       <WhatItSearches />
+      <RareDiseaseSources />
     </>
   );
 }

@@ -170,3 +170,10 @@ th { color: var(--muted); font-weight: 600; }
   color: #fff; font-weight: 600; background: rgba(255, 255, 255, 0.14); transition: background 0.15s; }
 .more-links a:hover { background: rgba(255, 255, 255, 0.24); }
 .more-arrow { margin-left: auto; opacity: 0.75; }
+
+/* "*" footnote marker and the sources note at the end of a page */
+.star { color: var(--accent); text-decoration: none; font-weight: 700; margin-left: 1px; }
+.sources { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--line); }
+.sources p { margin: 0 0 6px; }
+.sources ul { margin: 0; padding-left: 18px; }
+.sources a { color: inherit; }
